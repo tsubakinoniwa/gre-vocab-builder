@@ -159,7 +159,7 @@ def build_word(word, definition):
 
 
 if __name__ == '__main__':
-    # Loads, parses, and saves data under data/ as a tab delimited file
+    # Loads, parses, and saves data under data/ as a JSON file 
     for day in range(1, 8):
         data = parse(load(day))
         with open(f'data/{day}.json', 'w') as fout:
