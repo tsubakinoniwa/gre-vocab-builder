@@ -1,0 +1,2975 @@
+[
+    {
+        "word": "generic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "of or relating to a whole group or class",
+                "definition_CN": "通用的",
+                "synonym": [
+                    "inclusive"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "genial",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "kind and friendly",
+                "definition_CN": "友善的",
+                "synonym": [
+                    "friendly"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "genius",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a very smart or talented person",
+                "definition_CN": "天才",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "great natural ability",
+                "definition_CN": "天赋",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "germane",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "relating to a subject in an appropriate way",
+                "definition_CN": "密切相关的",
+                "synonym": [
+                    "relevant",
+                    "apposite"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "given",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "specified, fixed",
+                "definition_CN": "特定的,固定的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "glean",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to gather or collect in a gradual way",
+                "definition_CN": "搜集,获取",
+                "synonym": [
+                    "obtain"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "gloat",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to show in an improper or selfish way that you are happy with you own success or another person's failure",
+                "definition_CN": "幸灾乐祸",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "gloomy",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "sad or depressed",
+                "definition_CN": "忧郁的",
+                "synonym": [
+                    "lugubrious",
+                    "cheerless"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "glut",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "too much of something",
+                "definition_CN": "过量",
+                "synonym": [
+                    "surfeit",
+                    "plethora"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "goose bumps",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "small bumps on your skin that are caused by cold, fear, or a sudden feeling of excitement",
+                "definition_CN": "鸡皮疙瘩",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "govern",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to exercise continuous sovereign authority over",
+                "definition_CN": "治理",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to control or guide the actions of",
+                "definition_CN": "决定determine",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "grandiose",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "characterized by affectation of grandeur or splendor or by absurd exaggeration",
+                "definition_CN": "浮夸的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "impressive because of uncommon largeness, scope, effect, or grandeur",
+                "definition_CN": "宏伟的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "gratify",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to make happy or satisfied",
+                "definition_CN": "使满足,使高兴",
+                "synonym": [
+                    "please"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "gregarious",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "marked by or indicating a liking for companionship",
+                "definition_CN": "爱交际的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "growing in a cluster or colony",
+                "definition_CN": "群居的sociable",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "groundless",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not based on facts",
+                "definition_CN": "无根据的",
+                "synonym": [
+                    "unwarranted"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "guardian",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "someone or something that washes or protects something",
+                "definition_CN": "保护人",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "guile",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "deceitful cunning",
+                "definition_CN": "奸诈",
+                "synonym": [
+                    "deviousness"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hail",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to greet with enthusiastic approval",
+                "definition_CN": "称赞",
+                "synonym": [
+                    "acclaim"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "half-formulated",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "",
+                "definition_CN": "半成品的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "halfhearted",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "feeling or showing a lack of interest or enthusiasm",
+                "definition_CN": "不热情的",
+                "synonym": [
+                    "tepid",
+                    "lukewarm"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hallmark",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a quality, ability, etc., that is typical of a particular person or thing",
+                "definition_CN": "特点",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hallow",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to respect greatly",
+                "definition_CN": "极其崇敬",
+                "synonym": [
+                    "respect"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hamper",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to slow the movement, progress, or action of",
+                "definition_CN": "阻碍",
+                "synonym": [
+                    "impede"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hamstring",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to damage or ruin the force or effectiveness of",
+                "definition_CN": "使无能为力",
+                "synonym": [
+                    "impair"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "haphazard",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having no plan, order, or direction",
+                "definition_CN": "随意的",
+                "synonym": [
+                    "random",
+                    "helter-skelter"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "harmonize",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to bring into consonance or accord",
+                "definition_CN": "使一致",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "harsh",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having a coarse uneven surface that is rough or unpleasant to the touch",
+                "definition_CN": "粗糙的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "unduly exacting",
+                "definition_CN": "严厉的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "severe or cruel",
+                "definition_CN": "残酷的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hasty",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "fast and typically superficial",
+                "definition_CN": "匆忙的,草率的",
+                "synonym": [
+                    "impulsive",
+                    "rapid"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "heartless",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "very cruel",
+                "definition_CN": "残酷的",
+                "synonym": [
+                    "callous"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hedge",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to avoid giving a promise or direct answer",
+                "definition_CN": "回避",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "heed",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to pay attention to",
+                "definition_CN": "注意,留心",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "helter-skelter",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "marked by a lack of order or plan",
+                "definition_CN": "杂乱的",
+                "synonym": [
+                    "haphazard"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "heterodox",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not agreeing with established beliefs or standards",
+                "definition_CN": "异端的",
+                "synonym": [
+                    "iconoclastic"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "heterogeneous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "made up of parts that are different",
+                "definition_CN": "各种各样的",
+                "synonym": [
+                    "disparate",
+                    "dissimilar"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hew to",
+        "definitions": [
+            {
+                "part_of_speech": "phrase.",
+                "definition_EN": "",
+                "definition_CN": "遵守",
+                "synonym": [
+                    "conform",
+                    "to"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hidebound",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not willing to accept new or different ideas",
+                "definition_CN": "迂腐守旧的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hierarchical",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "of, relating to, or arranged in a hierarchy",
+                "definition_CN": "等级制度的",
+                "synonym": [
+                    "stratified"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "high-minded",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having strong moral principles",
+                "definition_CN": "高尚的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hinder",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to make slow or difficult",
+                "definition_CN": "妨碍",
+                "synonym": [
+                    "stymie",
+                    "inhibit",
+                    "block"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hitch",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a hidden problem that makes something more complicated or difficult to do",
+                "definition_CN": "故障",
+                "synonym": [
+                    "snag"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hodgepodge",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a mixture of different things",
+                "definition_CN": "大杂烩",
+                "synonym": [
+                    "patchwork",
+                    "welter",
+                    "pastiche"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "homogeneity",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the state of having identical cumulative distribution function or values",
+                "definition_CN": "同质",
+                "synonym": [
+                    "resemblance",
+                    "uniform"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hone",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to make more acute, intense, or effective",
+                "definition_CN": "磨砺,提升",
+                "synonym": [
+                    "enhance"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "honor",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "respect that is given to someone who is admired",
+                "definition_CN": "荣誉",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to regard or treat with respect and admiration",
+                "definition_CN": "尊敬venerate",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hortatory",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "hortative, exhortatory",
+                "definition_CN": "劝告的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hubris",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a great or foolish amount of pride or confidence",
+                "definition_CN": "傲慢自大",
+                "synonym": [
+                    "arrogance"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "humdrum",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "dull, boring, and ordinary",
+                "definition_CN": "单调的,乏味的",
+                "synonym": [
+                    "dull"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "humility",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the quality or state of not thinking you are better than other people",
+                "definition_CN": "谦逊",
+                "synonym": [
+                    "modesty"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hyperbole",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "language that describes something as better or worse than it really is",
+                "definition_CN": "夸大",
+                "synonym": [
+                    "exaggeration"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "hypocrisy",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a feigning to be what one is not or to believe what one does not",
+                "definition_CN": "伪善",
+                "synonym": [
+                    "mendacity",
+                    "insincerity"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "iconoclast",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a person who criticizes or opposes beliefs and practices that are widely accepted",
+                "definition_CN": "反传统者",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "idealistic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "of or relating to idealists or idealism",
+                "definition_CN": "空想的",
+                "synonym": [
+                    "quixotic"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "ideologue",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "someone who very strongly supports and is guided by the ideology of a particular group",
+                "definition_CN": "狂热支持某种理念的人",
+                "synonym": [
+                    "zealot"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "idiosyncratic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "characteristic peculiarity",
+                "definition_CN": "怪异的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "ignorance",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a lack of knowledge, understanding, or education",
+                "definition_CN": "无知",
+                "synonym": [
+                    "unfamiliarity"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "illusory",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "base one something that is not true or real",
+                "definition_CN": "虚假的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "imbibe",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to drink alcohol",
+                "definition_CN": "饮酒",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to receive into the mind and retain",
+                "definition_CN": "吸收,接受quaff",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "imitate",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to follow as a pattern, model, or example",
+                "definition_CN": "模仿",
+                "synonym": [
+                    "emulate"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "immaterial",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not important or significant",
+                "definition_CN": "不重要的",
+                "synonym": [
+                    "inconsequential"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "immense",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "very great in size or amount",
+                "definition_CN": "巨大的",
+                "synonym": [
+                    "colossal"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "imminent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "happening very soon",
+                "definition_CN": "即将发生的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "immortality",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the quality or state of someone or something that will never die or be forgotten",
+                "definition_CN": "不朽",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "immutable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "unable to be changed",
+                "definition_CN": "不可改变的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impair",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to make weaker or worse",
+                "definition_CN": "损害",
+                "synonym": [
+                    "hamstring",
+                    "undermine",
+                    "vitiate",
+                    "compromise",
+                    "undercut"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impartial",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "treating all people and groups equally",
+                "definition_CN": "公正的",
+                "synonym": [
+                    "evenhanded",
+                    "disinterested",
+                    "fair",
+                    "detachment"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impassioned",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "showing or feeling very strong emotions",
+                "definition_CN": "热情的",
+                "synonym": [
+                    "fiery"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impassive",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not showing emotion",
+                "definition_CN": "冷漠的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impecunious",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having little or no money",
+                "definition_CN": "贫穷的",
+                "synonym": [
+                    "indigent"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impede",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to slow the movement, progress, or action of",
+                "definition_CN": "阻碍",
+                "synonym": [
+                    "hamper"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impenetrable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "impossible to understand",
+                "definition_CN": "无法理解的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "imperceptible",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "impossible to see or notice",
+                "definition_CN": "难以觉察的",
+                "synonym": [
+                    "gradual"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "imperil",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to bring into peril: endanger",
+                "definition_CN": "危及",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impermanent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not lasting forever",
+                "definition_CN": "短暂的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impetuous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "acting or done quickly and without thought",
+                "definition_CN": "鲁莽的",
+                "synonym": [
+                    "precipitate"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "implacable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "opposed to someone or something in a very angry or determined way that cannot be changed",
+                "definition_CN": "无法安抚的",
+                "synonym": [
+                    "unyielding",
+                    "inexorable"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "implement",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to begin to do or use",
+                "definition_CN": "实施",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impolitic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "unwise",
+                "definition_CN": "不明智的",
+                "synonym": [
+                    "tactless"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "import",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "importance",
+                "definition_CN": "重要性",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impotent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "lacking power or strength",
+                "definition_CN": "无能的,无力的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impressive",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "deserving attention, admiration, or respect",
+                "definition_CN": "令人敬畏的,值得尊敬的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "improvise",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to speak or perform without preparation",
+                "definition_CN": "即兴创作",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impudent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "failing to show proper respect and courtesy",
+                "definition_CN": "放肆无礼的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impugn",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to assail by words or argument",
+                "definition_CN": "指责",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "impulsive",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "done suddenly and without planning",
+                "definition_CN": "冲动的",
+                "synonym": [
+                    "capricious",
+                    "hasty"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inaccessible",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "difficult or impossible to reach, approach, or understand",
+                "definition_CN": "难以到达的,难以理解的",
+                "synonym": [
+                    "opaque"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inadequate",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not enough or not good enough",
+                "definition_CN": "不足的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inborn",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "existing from the time someone is born",
+                "definition_CN": "天生的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inception",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "the time at which something begins",
+                "definition_CN": "开始",
+                "synonym": [
+                    "foundation"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inclined",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "wanting to do something or likely to do something",
+                "definition_CN": "倾向于...的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inclusive",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "covering or including everything",
+                "definition_CN": "全包括的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "including the stated limits and everything in between",
+                "definition_CN": "包括首尾两项的generic,",
+                "synonym": [
+                    "all-encompassing"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "incommensurable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not commensurable broadly",
+                "definition_CN": "不能相比的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "incomprehensible",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "impossible to understand",
+                "definition_CN": "费解的",
+                "synonym": [
+                    "inexplicable"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "incongruity",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "something that is incongruous",
+                "definition_CN": "矛盾",
+                "synonym": [
+                    "discrepancy"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inconsequential",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not important",
+                "definition_CN": "不重要的",
+                "synonym": [
+                    "trivial",
+                    "immaterial"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inconsistent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not compatible with another fact or claim",
+                "definition_CN": "不一致的,矛盾的",
+                "synonym": [
+                    "mixed"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inconstant",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "likely to change frequently without apparent for cogent reason",
+                "definition_CN": "善变的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "incorporate",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to include as part of something else",
+                "definition_CN": "纳入",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to blend or combine",
+                "definition_CN": "合并",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "incursion",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a sudden invasion or attack",
+                "definition_CN": "入侵",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indebted",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "owing gratitude or recognition to another",
+                "definition_CN": "感激的",
+                "synonym": [
+                    "beholden"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indecorous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "conflicting with accepted standards of good conduct or good taste",
+                "definition_CN": "不合礼节的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indict",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to charge with a fault or offense",
+                "definition_CN": "控告",
+                "synonym": [
+                    "excoriate"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indifferent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not interested in or concerned about something",
+                "definition_CN": "冷漠的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "marked by impartiality",
+                "definition_CN": "公正的apathy",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indigent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "very poor",
+                "definition_CN": "贫穷的",
+                "synonym": [
+                    "impecunious"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indiscernible",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "impossible to see, hear, or know clearly",
+                "definition_CN": "难以理解的",
+                "synonym": [
+                    "imperceptible"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indiscriminate",
+        "definitions": [
+            {
+                "part_of_speech": "affecting",
+                "definition_EN": "or harming many people or things in a careless or unfair way",
+                "definition_CN": "肆意的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "not",
+                "definition_EN": "careful in making choices",
+                "definition_CN": "盲目的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indispensable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "extremely important and necessary",
+                "definition_CN": "不可或缺的",
+                "synonym": [
+                    "essential",
+                    "crucial"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "indubitable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "too evident to be doubted",
+                "definition_CN": "不容置疑的",
+                "synonym": [
+                    "incontrovertible"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "induce",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to cause to do something",
+                "definition_CN": "引起",
+                "synonym": [
+                    "engender"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "industrious",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "working very hard",
+                "definition_CN": "勤奋的",
+                "synonym": [
+                    "diligent"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inert",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "unable to move",
+                "definition_CN": "不活动的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "very slow to move or act",
+                "definition_CN": "惰性的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inevitable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "sure to happen",
+                "definition_CN": "必然的",
+                "synonym": [
+                    "unavoidable",
+                    "preordained",
+                    "ineluctable"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inexplicable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not able to be explained or understand",
+                "definition_CN": "费解的",
+                "synonym": [
+                    "incomprehensible"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "infallibility",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "incapable of error",
+                "definition_CN": "无过失",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "infamy",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "evil reputation brought about by something grossly criminal, shocking, or brutal",
+                "definition_CN": "声名狼藉",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "infectious",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "capable of causing infection",
+                "definition_CN": "传染性的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "spreading or capable of spreading rapidly to others",
+                "definition_CN": "有感染力的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inferable from",
+        "definitions": [
+            {
+                "part_of_speech": "phrase.",
+                "definition_EN": "",
+                "definition_CN": "能从...推断的",
+                "synonym": [
+                    "entailed",
+                    "by"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inflammatory",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "causing anger",
+                "definition_CN": "煽动性的",
+                "synonym": [
+                    "provocative"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inflate",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to swell or distend with air or gas",
+                "definition_CN": "使膨胀",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to think or say that is larger or more important than it really is",
+                "definition_CN": "夸大",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "informative",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "providing information",
+                "definition_CN": "提供信息的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "ingenuous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "showing innocent or childlike simplicity and candidness",
+                "definition_CN": "天真的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "lacking craft or subtlety",
+                "definition_CN": "真诚的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inherent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "belonging to the basic nature of someone or something",
+                "definition_CN": "固有的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inhibit",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to keep from doing what he or she wants to do",
+                "definition_CN": "抑制,禁止",
+                "synonym": [
+                    "hinder",
+                    "bridle",
+                    "suppress"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inimical",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "likely to cause damage or have a bad effect",
+                "definition_CN": "有害的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not friendly",
+                "definition_CN": "不友好的antagonistic,",
+                "synonym": [
+                    "deleterious"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "innate",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "existing from the time a person or animal is born",
+                "definition_CN": "天生的",
+                "synonym": [
+                    "inborn"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "innocuous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "causing no injury",
+                "definition_CN": "无害的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not likely to bother or offend anyone",
+                "definition_CN": "无意冒犯的harmless,",
+                "synonym": [
+                    "benign",
+                    "inoffensive"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "innovative",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "introducing or using new ideas or methods",
+                "definition_CN": "创新的",
+                "synonym": [
+                    "experimental"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "insatiable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "always wanting more",
+                "definition_CN": "不满足的",
+                "synonym": [
+                    "voracious",
+                    "quenchless"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inscrutable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "difficult to understand",
+                "definition_CN": "难以理解的",
+                "synonym": [
+                    "uninformative",
+                    "impenetrable",
+                    "abstruse"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "insightful",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having or showing a very clear understanding of something",
+                "definition_CN": "有洞察力的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "insipid",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not interesting or exciting",
+                "definition_CN": "枯燥乏味的",
+                "synonym": [
+                    "bland"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inspire",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to cause to happen or be created",
+                "definition_CN": "使产生",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to cause someone to have",
+                "definition_CN": "",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "(a",
+                "definition_EN": "feeling or emotion)",
+                "definition_CN": "激起,引起",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "insufferable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not to be endured: intolerable",
+                "definition_CN": "难以忍受的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "insufficient",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not having or providing enough of what is needed",
+                "definition_CN": "不充足的",
+                "synonym": [
+                    "meager"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "insular",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "separated from other people or cultures",
+                "definition_CN": "狭隘的",
+                "synonym": [
+                    "provincial",
+                    "private"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "insulate",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to keep separate from something unpleasant, dangerous, etc.",
+                "definition_CN": "隔离,绝缘（不利的东西）",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "intelligible",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "able to be understood",
+                "definition_CN": "可理解的",
+                "synonym": [
+                    "readable"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "intensity",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the degree or amount of strength or force that something has",
+                "definition_CN": "强度",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "interchangeable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "capable of being used in place of each other",
+                "definition_CN": "可交换的",
+                "synonym": [
+                    "fungible"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "interdependent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "depending on each other",
+                "definition_CN": "相互依赖的",
+                "synonym": [
+                    "interrelated"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "intermediary",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "acting as a mediator",
+                "definition_CN": "调解的,中间的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "interrelated",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having a mutual or reciprocal relation",
+                "definition_CN": "相互联系的",
+                "synonym": [
+                    "interdependent"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "interweave",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to twist or weave together",
+                "definition_CN": "交织",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "intimate",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having a very close relationship",
+                "definition_CN": "亲密的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to say or suggest in an indirect way",
+                "definition_CN": "暗示",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "intransigent",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "completely unwilling to change",
+                "definition_CN": "不妥协的",
+                "synonym": [
+                    "obdurate",
+                    "resolute"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "intricate",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having many parts",
+                "definition_CN": "错综复杂的",
+                "synonym": [
+                    "convoluted"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "intrinsic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "belonging to the essential nature of a thing",
+                "definition_CN": "本质的",
+                "synonym": [
+                    "inherent"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "intuitive",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "agreeing with what seems naturally right",
+                "definition_CN": "凭直觉的",
+                "synonym": [
+                    "spontaneous"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "invalidate",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to weaken or destroy the effect of",
+                "definition_CN": "使无效",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to show or prove to be false or incorrect",
+                "definition_CN": "证明...错误",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "invective",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "insulting or abusive language",
+                "definition_CN": "猛烈烈抨击",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "invention",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "product of the imagination",
+                "definition_CN": "虚构",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "inverse",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "opposite in nature or effect",
+                "definition_CN": "相反的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "something that is the opposite of something else",
+                "definition_CN": "相反事物,相反数（数学）",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "involved",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "very complicated",
+                "definition_CN": "复杂的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "irascible",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "becoming angry very easily",
+                "definition_CN": "易怒的",
+                "synonym": [
+                    "exasperation"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "irenic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "favoring, conducive to, or operating toward peace, moderation, or conciliation",
+                "definition_CN": "和平主义的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "irksome",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "annoying or irritating",
+                "definition_CN": "讨厌的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "ironic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "using words that mean the opposite of what you really think especially in order to be funny",
+                "definition_CN": "讽刺的",
+                "synonym": [
+                    "paradoxical"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "irrefutable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not able to be proved wrong",
+                "definition_CN": "无法反驳的",
+                "synonym": [
+                    "undeniable"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "irreparable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "too bad to be corrected or repaired",
+                "definition_CN": "不可弥补的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "irresistible",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "impossible to resist especially because of strength or attractiveness",
+                "definition_CN": "不可抵抗的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "irresolution",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the state of not being certain about what to do",
+                "definition_CN": "犹豫不决",
+                "synonym": [
+                    "vacillation"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "isolationism",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the belief that a country should not be involved with other counties",
+                "definition_CN": "孤立主义",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "itinerant",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "traveling from place to place",
+                "definition_CN": "流动的,巡回的",
+                "synonym": [
+                    "peripatetic"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "jarring",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "",
+                "definition_CN": "刺耳的,不和谐的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "jealous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "hostile toward a rival or one believed to enjoy an advantage",
+                "definition_CN": "嫉妒的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "jejune",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not interesting",
+                "definition_CN": "乏味的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "too simple",
+                "definition_CN": "幼稚的vapid",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "jettison",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to get rid of",
+                "definition_CN": "丢弃",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "judicious",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having or showing good judgment",
+                "definition_CN": "审慎的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "justify",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to prove or show to be just, right, or reasonable",
+                "definition_CN": "证明...有理",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "keen",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "very excited about and interested in something",
+                "definition_CN": "渴望的",
+                "synonym": [
+                    "eager"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "keep abreast of",
+        "definitions": [
+            {
+                "part_of_speech": "phrase.",
+                "definition_EN": "",
+                "definition_CN": "了解...的最新情况",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "kindred",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "alike or similar",
+                "definition_CN": "同类的,相似的",
+                "synonym": [
+                    "affiliated"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "kinfolk",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a person's relatives",
+                "definition_CN": "亲戚",
+                "synonym": [
+                    "relative"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "knotty",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "difficult or complicated",
+                "definition_CN": "复杂的,棘手的",
+                "synonym": [
+                    "complicated"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "laborious",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "devoted to labor",
+                "definition_CN": "勤劳的",
+                "synonym": [
+                    "arduous"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "laconic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "using few words in speech or writing",
+                "definition_CN": "简洁的",
+                "synonym": [
+                    "taciturn",
+                    "terse",
+                    "curt"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lambaste",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to criticize very harshly",
+                "definition_CN": "严厉批评",
+                "synonym": [
+                    "denounce"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "languish",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to continue for a long time without activity or progress in an unpleasant or unwanted situation",
+                "definition_CN": "失去活力",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to suffer neglect",
+                "definition_CN": "被忽视",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lapse",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "an occurrence in which you fail to think or act in the usual or proper way for a brief time and make a mistake",
+                "definition_CN": "错误",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "an occurrence in which someone behaves badly or usually a short period of time",
+                "definition_CN": "行为失检",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to stop for usually a brief time",
+                "definition_CN": "终止",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "largesse",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the act of giving away money or the quality of a person who gives away money",
+                "definition_CN": "捐赠",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "laudatory",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "expressing or containing praise",
+                "definition_CN": "赞美的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "layperson",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a member of the laity",
+                "definition_CN": "门外汉",
+                "synonym": [
+                    "nonspecialist"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "legitimate",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "allowed according to rules or laws",
+                "definition_CN": "合法的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lethargic",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "feeling a lack of energy or a lack of interest in doing things",
+                "definition_CN": "无精打采的",
+                "synonym": [
+                    "somnolent",
+                    "slumberous"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "liberation",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the act or process of freeing someone or something from another's control",
+                "definition_CN": "解放",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "the removal of traditional social or sexual rules, attitudes, etc.",
+                "definition_CN": "解脱rejection",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "limpid",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "marked by transparency",
+                "definition_CN": "清晰的",
+                "synonym": [
+                    "pellucid"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lionize",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to treat as a very important and famous person",
+                "definition_CN": "崇拜,把...视为名人",
+                "synonym": [
+                    "eulogize"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "list",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to tile to one side especially of a boat of ship",
+                "definition_CN": "倾斜",
+                "synonym": [
+                    "tilt"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "live up to",
+        "definitions": [
+            {
+                "part_of_speech": "phrase.",
+                "definition_EN": "",
+                "definition_CN": "达到,不辜负",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "loath",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not wanting or willing to do something",
+                "definition_CN": "不情愿的",
+                "synonym": [
+                    "reluctant",
+                    "unwilling",
+                    "disinclined"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "long-winded",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "using too many words in speaking or writing",
+                "definition_CN": "冗长的",
+                "synonym": [
+                    "verbose",
+                    "prolix"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "loquacious",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "liking to talk and talking smoothly and easily",
+                "definition_CN": "健谈的",
+                "synonym": [
+                    "garrulous"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lowly",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "in a low position, manner, or degree",
+                "definition_CN": "卑微的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lucid",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "very clear and easy to understand",
+                "definition_CN": "清晰的,易懂的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lucrative",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "producing money or wealth",
+                "definition_CN": "获利丰厚的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "ludicrous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "very foolish",
+                "definition_CN": "荒唐可笑的",
+                "synonym": [
+                    "risible"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lugubrious",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "full of sadness or sorrow",
+                "definition_CN": "悲伤的",
+                "synonym": [
+                    "gloomy"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "lull",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to cause to sleep or rest",
+                "definition_CN": "使平静",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to cause to feel safe and relaxed instead of careful and alert",
+                "definition_CN": "蒙蔽",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a brief time when an action or activity stops",
+                "definition_CN": "间歇",
+                "synonym": [
+                    "respite"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "luxuriant",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "yielding abundantly",
+                "definition_CN": "茂盛的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "abundantly and often extravagantly rich and varied",
+                "definition_CN": "丰富的rampant",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "madcap",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "marked by capriciousness, recklessness, or foolishness",
+                "definition_CN": "愚蠢的,鲁莽的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "magnanimous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "showing or suggesting nobility of feeling and generosity of mind",
+                "definition_CN": "宽宏⼤量的,慷慨的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "maintain",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to cause to exist or continue without changing",
+                "definition_CN": "保持",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to affirm in or as if in argument",
+                "definition_CN": "断言assert",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "malady",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "a disease or illness",
+                "definition_CN": "疾病",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "malfeasance",
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "wrongdoing or misconduct especially by a public official",
+                "definition_CN": "渎职",
+                "synonym": [
+                    "fraudulence"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "malignant",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "aggressively malicious",
+                "definition_CN": "恶性的",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "malinger",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to pretend or exaggerate incapacity or illness",
+                "definition_CN": "装病",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "malleable",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "capable of being easily changed or influenced",
+                "definition_CN": "可塑的,易变的",
+                "synonym": [
+                    "plastic"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "malodorous",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "having a bad smell",
+                "definition_CN": "难闻的",
+                "synonym": [
+                    "noisome"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "manacle",
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to restrain from movement, progress, or action",
+                "definition_CN": "束缚",
+                "synonym": []
+            }
+        ],
+        "gre_synonym": []
+    },
+    {
+        "word": "manifest",
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "able to be seen",
+                "definition_CN": "明显的",
+                "synonym": []
+            },
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to show clearly",
+                "definition_CN": "清楚显示reveal,",
+                "synonym": [
+                    "self-evident",
+                    "obvious"
+                ]
+            }
+        ],
+        "gre_synonym": []
+    }
+]
