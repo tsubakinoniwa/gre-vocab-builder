@@ -97,7 +97,8 @@ def build_word(word, definition):
     definition = re.sub('&quot;\s*', '', definition)
     definition = re.sub(r'([\u4e00-\u9fff，（）：]+)', r'\1 ', definition)
     definition = re.sub(',\s*', ', ', definition)
-    parts = definition.replace('(', '\n(').split('\n')
+    definition = re.sub('(\([0-9]*\)\s*)', r'\n\1', definition)
+    parts = definition.split('\n')
     parts = list(map(lambda s: re.sub('\([0-9]*\)\s*', '', s), parts))
     parts = [part.strip() for part in parts if part.strip() != '']
 

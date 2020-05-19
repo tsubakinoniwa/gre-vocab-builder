@@ -412,13 +412,7 @@
             },
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to regard or describe",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(someone",
-                "definition_EN": "or something as having or deserving a particular status",
+                "definition_EN": "to regard or describe (someone or something as having or deserving a particular status",
                 "definition_CN": "感激",
                 "synonym": []
             }
@@ -1207,13 +1201,7 @@
         "definitions": [
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to think of",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(something",
-                "definition_EN": "that will or might happen in the future)",
+                "definition_EN": "to think of (something that will or might happen in the future)",
                 "definition_CN": "预期",
                 "synonym": []
             },
@@ -5059,13 +5047,7 @@
         "definitions": [
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to give",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(control,",
-                "definition_EN": "responsibility, authority, etc.) to someone",
+                "definition_EN": "to give (control, responsibility, authority, etc.) to someone",
                 "definition_CN": "委托",
                 "synonym": []
             }
@@ -6413,13 +6395,7 @@
             },
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to pull",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(someone",
-                "definition_EN": "or something that is heavy or difficult to move)",
+                "definition_EN": "to pull (someone or something that is heavy or difficult to move)",
                 "definition_CN": "拖拉",
                 "synonym": []
             }
@@ -6787,13 +6763,7 @@
         "definitions": [
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to remove",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(something",
-                "definition_EN": "that is not wanted or needed)",
+                "definition_EN": "to remove (something that is not wanted or needed)",
                 "definition_CN": "消除",
                 "synonym": []
             },
@@ -11058,13 +11028,7 @@
             },
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to cause someone to have",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(a",
-                "definition_EN": "feeling or emotion)",
+                "definition_EN": "to cause someone to have (a feeling or emotion)",
                 "definition_CN": "激起，引起",
                 "synonym": []
             }
@@ -15221,13 +15185,7 @@
         "definitions": [
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to be thought about or worried about by",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(someone)",
-                "definition_EN": "very often or constantly",
+                "definition_EN": "to be thought about or worried about by (someone) very often or constantly",
                 "definition_CN": "使全神贯注",
                 "synonym": []
             }
@@ -15510,13 +15468,7 @@
             },
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to believe in",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(a",
-                "definition_EN": "particular religion)",
+                "definition_EN": "to believe in (a particular religion)",
                 "definition_CN": "信奉",
                 "synonym": [
                     "proclaim"
@@ -18599,13 +18551,7 @@
         "definitions": [
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to stop something",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(especially",
-                "definition_EN": "blood) from flowing",
+                "definition_EN": "to stop something (especially blood) from flowing",
                 "definition_CN": "止血，平息",
                 "synonym": []
             }
@@ -21362,13 +21308,7 @@
         "definitions": [
             {
                 "part_of_speech": "v.",
-                "definition_EN": "to have and use",
-                "definition_CN": "",
-                "synonym": []
-            },
-            {
-                "part_of_speech": "(power,",
-                "definition_EN": "influence, etc.)",
+                "definition_EN": "to have and use (power, influence, etc.)",
                 "definition_CN": "行使，施加",
                 "synonym": [
                     "exert"
