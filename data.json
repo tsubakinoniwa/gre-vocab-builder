@@ -48,16 +48,30 @@
     },
     {
         "word": "aberration",
-        "definitions": [],
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "something that is unusual or unexpected",
+                "definition_CN": "异常",
+                "synonym": []
+            }
+        ],
         "gre_synonym": [
-            "n. something that is unusual or unexpected 异常   anomaly"
+            "anomaly"
         ]
     },
     {
         "word": "abet",
-        "definitions": [],
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to actively second and encourage",
+                "definition_CN": "支持，怂恿",
+                "synonym": []
+            }
+        ],
         "gre_synonym": [
-            "v. to actively second and encourage 支持，怂恿   instigate"
+            "instigate"
         ]
     },
     {
@@ -132,11 +146,16 @@
     },
     {
         "word": "absolve",
-        "definitions": [],
+        "definitions": [
+            {
+                "part_of_speech": "v.",
+                "definition_EN": "to make free from guilt, responsibility, etc.",
+                "definition_CN": "免罪",
+                "synonym": []
+            }
+        ],
         "gre_synonym": [
-            "v. to make free from guilt",
-            "responsibility",
-            "etc. 免罪   exonerate"
+            "exonerate"
         ]
     },
     {
@@ -153,9 +172,16 @@
     },
     {
         "word": "abstemious",
-        "definitions": [],
+        "definitions": [
+            {
+                "part_of_speech": "adj.",
+                "definition_EN": "not eating and drinking too much",
+                "definition_CN": "有节制的",
+                "synonym": []
+            }
+        ],
         "gre_synonym": [
-            "adj. not eating and drinking too much 有节制的   austere",
+            "austere",
             "moderate"
         ]
     },
@@ -595,9 +621,16 @@
     },
     {
         "word": "adulation",
-        "definitions": [],
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "excessive or slavish admiration or flattery",
+                "definition_CN": "谄媚",
+                "synonym": []
+            }
+        ],
         "gre_synonym": [
-            "n. excessive or slavish admiration or flattery 谄媚   approbation",
+            "approbation",
             "sycophant"
         ]
     },
@@ -1380,9 +1413,16 @@
     },
     {
         "word": "approbation",
-        "definitions": [],
+        "definitions": [
+            {
+                "part_of_speech": "n.",
+                "definition_EN": "an act of approving formally or officially",
+                "definition_CN": "赞同",
+                "synonym": []
+            }
+        ],
         "gre_synonym": [
-            "n. an act of approving formally or officially 赞同   adulation",
+            "adulation",
             "commendation"
         ]
     },

@@ -98,6 +98,7 @@ def build_word(word, definition):
     definition = re.sub(r'([\u4e00-\u9fff，（）：]+)', r'\1 ', definition)
     definition = re.sub(',\s*', ', ', definition)
     definition = re.sub('(\([0-9]*\)\s*)', r'\n\1', definition)
+    definition = re.sub('\s*(六选二同义词：)', r'\n\1', definition)
     parts = definition.split('\n')
     parts = list(map(lambda s: re.sub('\([0-9]*\)\s*', '', s), parts))
     parts = [part.strip() for part in parts if part.strip() != '']
