@@ -1,4 +1,6 @@
 import sys
+import re
+import json
 
 
 def load(day=1):
@@ -23,12 +25,11 @@ def parse(data):
     """Extract word-definition pairs from the data provided by the load()
     function. Returns a dictionary of word-definition pairs.
     """
-    res = {}
+    res = []
     while len(data) > 0:
         line = data.pop(0).strip()
         if line == '<div class="SetPageTerms-term">':
-            word, defn = parse_item(data)
-            res[word] = defn
+            res.append(parse_item(data))
         elif len(res) != 0 and line == '</section>':
             # This signals the end of all definitions
             break
@@ -38,7 +39,7 @@ def parse(data):
 
 def parse_item(data):
     """Helper function for parse() to extract one entry from data. Returns
-    a tuple of word followed by its definition.
+    a word dictionary built by build_world().
     """
     DEFINITION_TAG = '<span class="TermText notranslate lang-en">'
 
@@ -68,15 +69,98 @@ def parse_item(data):
                     definition += line.strip()
             processed = True
 
-    return (word, definition)
+    return build_word(word, definition)
+
+
+def build_word(word, definition):
+    """From the word and definition of a word, build a dictionary represnting
+    a word object, which will be saved as a JSON file. The structure of one
+    word will be as follows:
+    {
+        'word': '...',
+        'definitions': [
+            {
+                'part_of_speech': 'adj.',
+                'definition_EN': '...',
+                'definition_CN': '...',
+                'synonym': ['...', '...']
+            },
+            ...
+        ],
+        'gre_synonym': ['...', '...']
+    }
+    'gre_synonym' are the synonyms commonly tested in the GRE.
+    """
+
+    # Clean the definition string and split into parts
+    definition = re.sub('&quot;\s*', '', definition)
+    parts = definition.replace('(', '\n(').replace('，', ',').split('\n')
+    parts = list(map(lambda s: re.sub('\([0-9]*\)\s*', '', s), parts))
+    parts = [part.strip() for part in parts if part.strip() != '']
+
+    # At this stage, each element in parts will be a definition
+    # or a gre_synonym. First parse all the definitions
+    definitions = []
+    for ele in parts:
+        # Check if this is a gre_synonym. This will always occur at the end
+        if ele.find('六选二同义词') != -1:
+            continue
+
+        ele_parts = ele.split(' ')
+        obj = {
+            'part_of_speech': ele_parts[0],
+            'definition_EN': '',
+            'definition_CN': '',
+            'synonym': []
+        }
+
+        ind = 1
+        # Extract English definition (definition_EN)
+        while ind < len(ele_parts):
+            part = ele_parts[ind]
+            if len(re.findall(r'[\u4e00-\u9fff]+', part)) == 0:
+                obj['definition_EN'] += ' ' + part
+            else:
+                break
+            ind += 1
+        obj['definition_EN'] = obj['definition_EN'].strip()
+
+        # Extract Chinese definition (definition_CN)
+        while ind < len(ele_parts):
+            part = ele_parts[ind]
+            if len(re.findall(r'[\u4e00-\u9fff]+', part)) != 0:
+                obj['definition_CN'] += ' ' + part
+            else:
+                break
+            ind += 1
+        obj['definition_CN'] = obj['definition_CN'].strip()
+
+        # Get synonynms if there is any
+        while ind < len(ele_parts):
+            obj['synonym'].append(ele_parts[ind].replace(',', '').strip())
+            ind += 1
+
+        # Store the object
+        definitions.append(obj)
+
+    # Parse gre_synonym if there is any
+    gre_synonym = []
+    if parts[-1].find('六选二同义词') != -1:
+        syn_string = parts[-1].replace('六选二同义词：', '')
+        syn_parts = syn_string.split(',')
+        for part in syn_parts:
+            gre_synonym.append(part.replace(',', '').strip())
+
+    return {
+        'word': word,
+        'definitions': definitions,
+        'gre_synonym': gre_synonym
+    }
 
 
 if __name__ == '__main__':
-    if len(sys.argv) >= 2:
-        day = int(sys.argv[1])
-    else:
-        day = 1
-    data = load(day)
-    res = parse(data)
-    for k, v in res.items():
-        print(k, v.replace('\n', '\\n'))
+    # Loads, parses, and saves data under data/ as a tab delimited file
+    for day in range(1, 8):
+        data = parse(load(day))
+        with open(f'data/{day}.json', 'w') as fout:
+            json.dump(data, fout, indent=4, ensure_ascii=False)
