@@ -95,7 +95,7 @@ def build_word(word, definition):
     # Remove quotes, insert spaces after commas, and insert spaces between
     # Chinese and English characters.
     definition = re.sub('&quot;\s*', '', definition)
-    definition = re.sub(r'([\u4e00-\u9fff，（）]+)', r'\1 ', definition)
+    definition = re.sub(r'([\u4e00-\u9fff，（）：]+)', r'\1 ', definition)
     definition = re.sub(',\s*', ', ', definition)
     parts = definition.replace('(', '\n(').split('\n')
     parts = list(map(lambda s: re.sub('\([0-9]*\)\s*', '', s), parts))
@@ -106,7 +106,7 @@ def build_word(word, definition):
     definitions = []
     for ele in parts:
         # Check if this is a gre_synonym. This will always occur at the end
-        if ele.find('六选二同义词') != -1:
+        if ele.find('六选二同义词：') != -1:
             continue
 
         ele_parts = ele.split(' ')
@@ -121,7 +121,7 @@ def build_word(word, definition):
         # Extract English definition (definition_EN)
         while ind < len(ele_parts):
             part = ele_parts[ind]
-            if len(re.findall(r'[\u4e00-\u9fff，（）]+', part)) == 0:
+            if len(re.findall(r'[\u4e00-\u9fff，（）：]+', part)) == 0:
                 obj['definition_EN'] += ' ' + part
             else:
                 break
@@ -131,7 +131,7 @@ def build_word(word, definition):
         # Extract Chinese definition (definition_CN)
         while ind < len(ele_parts):
             part = ele_parts[ind]
-            if len(re.findall(r'[\u4e00-\u9fff，（）]+', part)) != 0:
+            if len(re.findall(r'[\u4e00-\u9fff，（）：]+', part)) != 0:
                 obj['definition_CN'] += ' ' + part
             else:
                 break
@@ -150,7 +150,7 @@ def build_word(word, definition):
 
     # Parse gre_synonym if there is any
     gre_synonym = []
-    if parts[-1].find('六选二同义词') != -1:
+    if parts[-1].find('六选二同义词：') != -1:
         syn_string = parts[-1].replace('六选二同义词：', '')
         syn_parts = syn_string.split(',')
         for part in syn_parts:
