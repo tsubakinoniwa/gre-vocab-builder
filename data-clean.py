@@ -92,9 +92,12 @@ def build_word(word, definition):
     'gre_synonym' are the synonyms commonly tested in the GRE.
     """
 
-    # Clean the definition string and split into parts
+    # Remove quotes, insert spaces after commas, and insert spaces between
+    # Chinese and English characters.
     definition = re.sub('&quot;\s*', '', definition)
-    parts = definition.replace('(', '\n(').replace('，', ',').split('\n')
+    definition = re.sub(r'([\u4e00-\u9fff，（）]+)', r'\1 ', definition)
+    definition = re.sub(',\s*', ', ', definition)
+    parts = definition.replace('(', '\n(').split('\n')
     parts = list(map(lambda s: re.sub('\([0-9]*\)\s*', '', s), parts))
     parts = [part.strip() for part in parts if part.strip() != '']
 
@@ -118,7 +121,7 @@ def build_word(word, definition):
         # Extract English definition (definition_EN)
         while ind < len(ele_parts):
             part = ele_parts[ind]
-            if len(re.findall(r'[\u4e00-\u9fff]+', part)) == 0:
+            if len(re.findall(r'[\u4e00-\u9fff，（）]+', part)) == 0:
                 obj['definition_EN'] += ' ' + part
             else:
                 break
@@ -128,7 +131,7 @@ def build_word(word, definition):
         # Extract Chinese definition (definition_CN)
         while ind < len(ele_parts):
             part = ele_parts[ind]
-            if len(re.findall(r'[\u4e00-\u9fff]+', part)) != 0:
+            if len(re.findall(r'[\u4e00-\u9fff，（）]+', part)) != 0:
                 obj['definition_CN'] += ' ' + part
             else:
                 break
@@ -137,7 +140,9 @@ def build_word(word, definition):
 
         # Get synonynms if there is any
         while ind < len(ele_parts):
-            obj['synonym'].append(ele_parts[ind].replace(',', '').strip())
+            syn = ele_parts[ind].replace(',', '').strip()
+            if syn != '':
+                obj['synonym'].append(syn)
             ind += 1
 
         # Store the object
@@ -149,7 +154,8 @@ def build_word(word, definition):
         syn_string = parts[-1].replace('六选二同义词：', '')
         syn_parts = syn_string.split(',')
         for part in syn_parts:
-            gre_synonym.append(part.replace(',', '').strip())
+            if part.strip() != '':
+                gre_synonym.append(part.replace(',', '').strip())
 
     return {
         'word': word,
@@ -159,8 +165,10 @@ def build_word(word, definition):
 
 
 if __name__ == '__main__':
-    # Loads, parses, and saves data under data/ as a JSON file 
+    # Loads, parses, and saves data under data/ as a JSON file
+    data = []
     for day in range(1, 8):
-        data = parse(load(day))
-        with open(f'data/{day}.json', 'w') as fout:
-            json.dump(data, fout, indent=4, ensure_ascii=False)
+        data.extend(parse(load(day)))
+
+    with open(f'data.json', 'w') as fout:
+        json.dump(data, fout, indent=4, ensure_ascii=False)
