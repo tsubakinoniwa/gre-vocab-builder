@@ -4,11 +4,11 @@ using Xamarin.Forms.Xaml;
 
 namespace GREVocab {
     public partial class App : Application {
+        public static VocabBuilderViewModel ViewModel = new VocabBuilderViewModel();
         public App() {
             InitializeComponent();
-
             MainPage = new HomePage();
-            BindingContext = new VocabBuilderViewModel();
+            BindingContext = ViewModel;
         }
 
         protected override void OnStart() {

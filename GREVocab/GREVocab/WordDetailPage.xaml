@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GREVocab.WordDetailPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.LargeTitleDisplay="Never"
+             x:Name="_WordDetailPage"
+             Title="{Binding Source={Reference _WordDetailPage}, Path=Word.Content}">
+    <ContentPage.Content>
+        <Grid Padding="20, 60, 20, 20" x:Name="OuterGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Label to display the actual word-->
+            <Label FontSize="36" BindingContext="{Reference _WordDetailPage}"
+                   Text="{Binding Word.Content}"
+                   HorizontalOptions="Center" VerticalOptions="End"
+                   FontFamily="Didot" FontAttributes="Bold"
+                   Grid.Row="0" Grid.Column="0"/>
+
+            <!--Showing Progress of word-->
+            <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="0"
+                         Spacing="2" BindingContext="{Reference _WordDetailPage}"
+                         HorizontalOptions="Center">
+                <BoxView WidthRequest="10" HeightRequest="10" Color="{Binding Word.Color1, Mode=OneWay}"/>
+                <BoxView WidthRequest="10" HeightRequest="10" Color="{Binding Word.Color2, Mode=OneWay}"/>
+                <BoxView WidthRequest="10" HeightRequest="10" Color="{Binding Word.Color3, Mode=OneWay}"/>
+                <BoxView WidthRequest="10" HeightRequest="10" Color="{Binding Word.Color4, Mode=OneWay}"/>
+                <BoxView WidthRequest="10" HeightRequest="10" Color="{Binding Word.Color5, Mode=OneWay}"/>
+                <BoxView WidthRequest="10" HeightRequest="10" Color="{Binding Word.Color6, Mode=OneWay}"/>
+            </StackLayout>
+
+            <!--Will add another grid of definitions here programatically-->
+
+            <!--Buttons that will appear during study time-->
+            <StackLayout x:Name="StudyButtonsStack" Grid.Row="3" Grid.Column="0"
+                         IsVisible="True">
+                <Button Command="{Binding RecognizedCommand}" Text="Recalled Correctly"
+                        Style="{StaticResource DefaultButtonStyleVariant}"/>
+                <Button Command="{Binding UnrecognizedCommand}" Text="Did Not Remember"
+                        Style="{StaticResource WarnButtonStyleVariant}"/>
+            </StackLayout>
+
+            <!--Buttons that will appear in word list mode-->
+            <StackLayout x:Name="ControlButtonsStack" Grid.Row="3" Grid.Column="0"
+                        IsVisible="False">
+                <Button Command="{Binding TooEasyCommand}" Text="Too Easy"
+                        CommandParameter="{Binding Source={Reference _WordDetailPage}, Path=Word}"
+                        Style="{StaticResource DefaultButtonStyleVariant}"/>
+                <Button Command="{Binding ResetWordCommand}" Text="Reset Progress"
+                        CommandParameter="{Binding Source={Reference _WordDetailPage}, Path=Word}"
+                        Style="{StaticResource WarnButtonStyleVariant}"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

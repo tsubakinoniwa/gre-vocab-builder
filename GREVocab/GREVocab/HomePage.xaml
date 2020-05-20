@@ -2,32 +2,25 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="GREVocab.HomePage"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
             xmlns:local="clr-namespace:GREVocab;assembly=GREVocab">
 
     <!--Overview of today's objectives-->
-    <NavigationPage Title="Overview"
-                    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-                    ios:NavigationPage.PrefersLargeTitles="false">
+    <NavigationPage Title="Overview" ios:NavigationPage.PrefersLargeTitles="false">
         <x:Arguments>
-            <local:OverviewPage xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-                                Title="Overview"
-                                ios:Page.LargeTitleDisplay="Never"/>
+            <local:OverviewPage Title="Overview" ios:Page.LargeTitleDisplay="Never"/>
         </x:Arguments>
     </NavigationPage>
 
     <!--Page with all words in the list-->
-    <NavigationPage Title="Words List"
-                    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-                    ios:NavigationPage.PrefersLargeTitles="true">
+    <NavigationPage Title="Words List" ios:NavigationPage.PrefersLargeTitles="true">
         <x:Arguments>
             <local:AllWordsPage Title="Words List"/>
         </x:Arguments>
     </NavigationPage>
 
     <!--Settings Page-->
-    <NavigationPage Title="Settings"
-                    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-                    ios:NavigationPage.PrefersLargeTitles="true">
+    <NavigationPage Title="Settings" ios:NavigationPage.PrefersLargeTitles="true">
         <x:Arguments>
             <local:SettingsPage Title="Settings"/>
         </x:Arguments>

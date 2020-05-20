@@ -9,19 +9,16 @@ namespace GREVocab {
         VocabBuilderViewModel ViewModel;
         public SettingsPage() {
             InitializeComponent();
+            ViewModel = App.ViewModel;
 
-            ShuffleDescription.Text = "Randomly choose new words to study. " +
+            ShuffleDescription.Text = "Randomly chooses new words to study. " +
                 "Encountered words will not be affected.";
-            ResetDescription.Text = "Clear all study progress. This operation " +
+            ResetDescription.Text = "Clears all study progress. This operation " +
                 "is irreversible.";
         }
 
         protected override void OnAppearing() {
             base.OnAppearing();
-
-            // Set the view model here since we can guarantee the binding
-            // context has been initialized
-            ViewModel = (VocabBuilderViewModel)BindingContext;
 
             // Initialize controls to previously set values
             NewWordsPerDay.Value = ViewModel.NewWordsPerDay;

@@ -10,6 +10,8 @@ namespace GREVocab {
      * the Json string in Record will expand into
      */
     public class Word : INotifyPropertyChanged {
+        public int Id;
+
         [JsonProperty("word")]
         public string content;
         public string Content {
@@ -26,7 +28,20 @@ namespace GREVocab {
             get { return greSynonyms; }
         }
 
-        public int timesStudied;
+        private int timesStudied;
+        public int TimesStudied {
+            get { return timesStudied; }
+            set {
+                timesStudied = value;
+                OnPropertyChanged();
+                OnPropertyChanged("Color1");
+                OnPropertyChanged("Color2");
+                OnPropertyChanged("Color3");
+                OnPropertyChanged("Color4");
+                OnPropertyChanged("Color5");
+                OnPropertyChanged("Color6");
+            }
+        }
 
         // Some color properties for the display of progress
         public Color Color1 {
@@ -68,9 +83,9 @@ namespace GREVocab {
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        //private void OnPropertyChanged([CallerMemberName] string propertyName = "") {
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //}
+        private void OnPropertyChanged([CallerMemberName] string propertyName = "") {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public override string ToString() {
             string res = $"{Content}\n";

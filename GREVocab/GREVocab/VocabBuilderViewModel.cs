@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,17 @@ namespace GREVocab {
         public List<Record> NewRecords;
         public List<Record> Review10Records;
         public List<Record> Review60Records;
+
+        private ObservableCollection<Record> allRecords = null;
+        public ObservableCollection<Record> AllRecords {
+            get {
+                if (allRecords == null) {
+                    GetAllRecords();
+                }
+                return allRecords;
+            }
+        }
+
 
         public int NewWordsPerDay {
             get {
@@ -95,8 +107,10 @@ namespace GREVocab {
             }
         }
 
-        public ICommand RecognizedCommand;
-        public ICommand UnrecognizedCommand;
+        public ICommand RecognizedCommand { get; set; }
+        public ICommand UnrecognizedCommand { get; set; }
+        public ICommand TooEasyCommand { get; set; }
+        public ICommand ResetWordCommand { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -115,8 +129,24 @@ namespace GREVocab {
             LoadNewWords();
 
             // Attaching handler to commands
-            RecognizedCommand = new Command(execute: RecognizedCommandHandler);
-            UnrecognizedCommand = new Command(execute: UnrecognizedCommandHandler);
+            RecognizedCommand = new Command(execute: () => RecognizedCommandHandler());
+            UnrecognizedCommand = new Command(execute: () => UnrecognizedCommandHandler());
+            TooEasyCommand = new Command(execute: (w) => TooEasyCommandHandler((Word)w));
+            ResetWordCommand = new Command(execute: (w) => ResetWordCommandHandler((Word)w));
+        }
+
+        private void TooEasyCommandHandler(Word w) {
+            Record r = Conn.Table<Record>().Where(x => x.Id == w.Id).FirstOrDefault();
+            r.TimesStudied = 6;
+            r.NextSchedule = DateTime.Now + new TimeSpan(365 * 100, 0, 0, 0, 0);
+            Conn.Update(r);
+        }
+
+        private void ResetWordCommandHandler(Word w) {
+            Record r = Conn.Table<Record>().Where(x => x.Id == w.Id).FirstOrDefault();
+            r.TimesStudied = 0;
+            r.NextSchedule = DateTime.Now - new TimeSpan(1, 0, 0, 0, 0);
+            Conn.Update(r);
         }
 
         private void RecognizedCommandHandler() {
@@ -296,9 +326,24 @@ namespace GREVocab {
             }
         }
 
-        public List<Record> LoadAllRecords() {
-            return Conn.Table<Record>().ToList();
+        private void GetAllRecords() {
+            var allRecordsList = Conn.Table<Record>().ToList();
+            allRecords = new ObservableCollection<Record>();
+            foreach (var r in allRecordsList) {
+                allRecords.Add(r);
+            }
         }
+
+        //public ObservableCollection<Word> GetAllWords() {
+        //    if (AllRecords == null) GetAllRecords();
+
+        //    var res = new ObservableCollection<Word>();
+        //    foreach (var r in AllRecords) {
+        //        res.Add(r.GetWord());
+        //    }
+
+        //    return res;
+        //}
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = "") {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:GREVocab;assembly=GREVocab"
              mc:Ignorable="d" x:Class="GREVocab.App">
     <Application.Resources>
         <!--Base button style from which other button styles derive.-->
@@ -33,6 +34,7 @@
                BasedOn="{StaticResource PlainButtonStyle}">
             <Setter Property="BackgroundColor" Value="#EDF5FC"/>
             <Setter Property="TextColor" Value="#1976D2"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
         </Style>
 
         <!--Light Red Background, Red Text-->
@@ -47,5 +49,9 @@
             <Setter Property="TextColor" Value="Gray"/>
             <Setter Property="FontSize" Value="Small"/>
         </Style>
+
+        <!--<ResourceDictionary>
+            <local:VocabBuilderViewModel x:Key="VocabViewModel"/>
+        </ResourceDictionary>-->
     </Application.Resources>
 </Application>

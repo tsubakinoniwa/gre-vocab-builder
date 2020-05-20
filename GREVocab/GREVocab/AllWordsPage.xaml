@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GREVocab.AllWordsPage">
     <ContentPage.Content>
-        <StackLayout Padding="20">
-            <ListView x:Name="AllWords">
+        <StackLayout Padding="20, 0, 20, 0">
+            <ListView x:Name="AllWords" ItemTapped="AllWords_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -18,29 +18,29 @@
                                     <ColumnDefinition Width="1*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="{Binding Content}" VerticalOptions="Center"
+                                <Label Text="{Binding Content, Path=Word}" VerticalOptions="Center"
                                    Grid.Row="0" Grid.Column="0"/>
 
                                 <StackLayout Orientation="Horizontal" VerticalOptions="Center"
                                              Grid.Row="0" Grid.Column="1" Spacing="2"
                                              Margin="0, 0, 10, 0">
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Color1}"/>
+                                             Color="{Binding Word.Color1}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Color2}"/>
+                                             Color="{Binding Word.Color2}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Color3}"/>
+                                             Color="{Binding Word.Color3}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Color4}"/>
+                                             Color="{Binding Word.Color4}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Color5}"/>
+                                             Color="{Binding Word.Color5}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Color6}"/>
+                                             Color="{Binding Word.Color6}"/>
                                     <!--<BoxView WidthRequest="10" HeightRequest="10"
                                              Color="White"/>-->
                                 </StackLayout>
 
-                                <Label Text="{Binding ShortDefinition}" TextColor="Gray"
+                                <Label Text="{Binding Word.ShortDefinition}" TextColor="Gray"
                                        FontSize="Small" VerticalOptions="Center"
                                        Grid.Row="0" Grid.Column="2"/>
                             </Grid>
