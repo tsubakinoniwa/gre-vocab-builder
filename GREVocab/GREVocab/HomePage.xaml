@@ -5,12 +5,31 @@
             xmlns:local="clr-namespace:GREVocab;assembly=GREVocab">
 
     <!--Overview of today's objectives-->
-    <NavigationPage Title="Overview">
+    <NavigationPage Title="Overview"
+                    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                    ios:NavigationPage.PrefersLargeTitles="false">
         <x:Arguments>
-            <local:OverviewPage/>
+            <local:OverviewPage xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                                Title="Overview"
+                                ios:Page.LargeTitleDisplay="Never"/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <!--Page with all words in the list-->
+    <NavigationPage Title="Words List"
+                    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                    ios:NavigationPage.PrefersLargeTitles="true">
+        <x:Arguments>
+            <local:AllWordsPage Title="Words List"/>
         </x:Arguments>
     </NavigationPage>
 
     <!--Settings Page-->
-    <local:SettingsPage Title="Settings"/>
+    <NavigationPage Title="Settings"
+                    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                    ios:NavigationPage.PrefersLargeTitles="true">
+        <x:Arguments>
+            <local:SettingsPage Title="Settings"/>
+        </x:Arguments>
+    </NavigationPage>
 </TabbedPage>

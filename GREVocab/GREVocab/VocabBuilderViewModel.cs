@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using SQLite;
@@ -81,6 +82,16 @@ namespace GREVocab {
         public Word DisplayWord {
             get {
                 return CurrentRecord.GetWord();
+            }
+        }
+
+        public bool Shuffle {
+            get {
+                return Preferences.Get("Shuffle", true);
+            }
+            set {
+                Preferences.Set("Shuffle", value);
+                OnPropertyChanged();
             }
         }
 
@@ -184,16 +195,16 @@ namespace GREVocab {
                     r.NextSchedule = DateTime.Now + new TimeSpan(1, 0, 0, 0, 0);
                     break;
                 case 2:  // 2 days
-                    r.NextSchedule = DateTime.Now + new TimeSpan(2, 0, 0, 0, 0);
+                    r.NextSchedule = DateTime.Now + new TimeSpan(1, 0, 0, 0, 0);
                     break;
                 case 3:  // 4 days
-                    r.NextSchedule = DateTime.Now + new TimeSpan(4, 0, 0, 0, 0);
+                    r.NextSchedule = DateTime.Now + new TimeSpan(2, 0, 0, 0, 0);
                     break;
                 case 4:  // 7 days
-                    r.NextSchedule = DateTime.Now + new TimeSpan(7, 0, 0, 0, 0);
+                    r.NextSchedule = DateTime.Now + new TimeSpan(3, 0, 0, 0, 0);
                     break;
                 case 5:  // 15 days
-                    r.NextSchedule = DateTime.Now + new TimeSpan(15, 0, 0, 0, 0);
+                    r.NextSchedule = DateTime.Now + new TimeSpan(8, 0, 0, 0, 0);
                     break;
                 default:  // Mark done with 100 years difference
                     r.NextSchedule = DateTime.Now + new TimeSpan(365 * 10, 0, 0, 0, 0);
@@ -229,7 +240,7 @@ namespace GREVocab {
                 NewRecords = allNewRecords;
             }
             else {
-                if (Preferences.Get("Shuffle", true)) {
+                if (Shuffle) {
                     // Use the Fisher-Yates shuffle algorithm to shuffle
                     // the indices, and keep the first NewWordsPerDay number
                     // of them.
@@ -260,7 +271,8 @@ namespace GREVocab {
          * Initializes the database with data populated from data.json.
          * Completely wipes all exisiting records.
          */
-        public async void InitDatabase() {
+        public async Task InitDatabase() {
+            Console.WriteLine("InitDB");
             Conn.DropTable<Record>();
             Conn.CreateTable<Record>();
 

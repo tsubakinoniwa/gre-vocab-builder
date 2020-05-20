@@ -1,5 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="GREVocab.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" x:Class="GREVocab.App">
     <Application.Resources>
+        <!--Base button style from which other button styles derive.-->
+        <Style TargetType="Button" x:Key="PlainButtonStyle">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="FontSize" Value="Medium"/>
+        </Style>
+
+        <!--Blue Background, White Text-->
+        <Style TargetType="Button" x:Key="DefaultButtonStyle"
+               BasedOn="{StaticResource PlainButtonStyle}">
+            <Setter Property="BackgroundColor" Value="#1976D2"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+
+        <!--Red Background, White Text-->
+        <Style TargetType="Button" x:Key="WarnButtonStyle"
+               BasedOn="{StaticResource PlainButtonStyle}">
+            <Setter Property="BackgroundColor" Value="#D11E36"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <!--Light Blue Background, Blue Text-->
+        <Style TargetType="Button" x:Key="DefaultButtonStyleVariant"
+               BasedOn="{StaticResource PlainButtonStyle}">
+            <Setter Property="BackgroundColor" Value="#EDF5FC"/>
+            <Setter Property="TextColor" Value="#1976D2"/>
+        </Style>
+
+        <!--Light Red Background, Red Text-->
+        <Style TargetType="Button" x:Key="WarnButtonStyleVariant"
+               BasedOn="{StaticResource PlainButtonStyle}">
+            <Setter Property="BackgroundColor" Value="#FCEDED"/>
+            <Setter Property="TextColor" Value="#D11E36"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="GroupHeader">
+            <Setter Property="TextColor" Value="Gray"/>
+            <Setter Property="FontSize" Value="Small"/>
+        </Style>
     </Application.Resources>
 </Application>

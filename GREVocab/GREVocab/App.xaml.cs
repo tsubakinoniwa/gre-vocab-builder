@@ -7,18 +7,8 @@ namespace GREVocab {
         public App() {
             InitializeComponent();
 
-            MainPage = new MainPage();
-            VocabBuilderViewModel vm = new VocabBuilderViewModel();
-            //vm.InitDatabase();
-            vm.LoadNewWords();
-            vm.LoadReviewWords();
-
-            Console.WriteLine(vm.ReviewRecords.Count);
-            Console.WriteLine(vm.NewRecords.Count);
-
-            //foreach (var r in vm.NewRecords) {
-            //    Console.WriteLine(r.GetWord().Content);
-            //}
+            MainPage = new HomePage();
+            BindingContext = new VocabBuilderViewModel();
         }
 
         protected override void OnStart() {
