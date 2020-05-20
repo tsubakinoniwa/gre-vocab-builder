@@ -16,9 +16,9 @@ namespace GREVocab {
             Console.WriteLine(vm.ReviewRecords.Count);
             Console.WriteLine(vm.NewRecords.Count);
 
-            foreach (var r in vm.NewRecords) {
-                Console.WriteLine(r.GetWord().Content);
-            }
+            //foreach (var r in vm.NewRecords) {
+            //    Console.WriteLine(r.GetWord().Content);
+            //}
         }
 
         protected override void OnStart() {

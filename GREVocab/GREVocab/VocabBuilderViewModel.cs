@@ -9,17 +9,27 @@ using System.Windows.Input;
 using Newtonsoft.Json;
 using SQLite;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace GREVocab {
+    public enum VocabBuilderViewModelState {
+        Review,     // Reviewing old words from previous days
+        Review10,   // Reviewing the most recent 10 words learned
+        Review60,   // Reviewing the most recent 60 words learned
+        New         // Studying new words
+    }
     public class VocabBuilderViewModel : INotifyPropertyChanged {
         private SQLiteConnection Conn;
+        private VocabBuilderViewModelState State;
+
         public List<Record> ReviewRecords;
         public List<Record> NewRecords;
-        private bool Reviewing;
+        public List<Record> Review10Records;
+        public List<Record> Review60Records;
 
         public int NewWordsPerDay {
             get {
-                return Preferences.Get("NewWordsPerDay", 50);
+                return Preferences.Get("NewWordsPerDay", 120);
             }
             set {
                 Preferences.Set("NewWordsPerDay", value);
@@ -27,14 +37,41 @@ namespace GREVocab {
             }
         }
 
-        public Record CurrentRecord {
+        private Record CurrentRecord {
             get {
-                if (ReviewRecords.Count != 0) {
+                // We start by going through all the review words.
+                if (State == VocabBuilderViewModelState.Review && ReviewRecords.Count != 0) {
+                    if (ReviewRecords.Count != 1) State = VocabBuilderViewModelState.Review;
+                    else State = VocabBuilderViewModelState.New;
+
                     return ReviewRecords[0];
                 }
+                // Whenever the bucket for most recent 10 words is filled,
+                // start reviewing those until they are exhausted.
+                else if (Review10Records.Count == 10 || NewRecords.Count == 0 ||
+                    State == VocabBuilderViewModelState.Review10) {
+
+                    if (Review10Records.Count != 1) State = VocabBuilderViewModelState.Review10;
+                    else State = VocabBuilderViewModelState.New;
+
+                    return Review10Records[0];
+                }
+                // Whenever the bucket for the most recent 60 words is filled,
+                // (note that we can overfill, unlike the most recent 10 words),
+                // start reviewing those until they are exhausted.
+                else if (Review60Records.Count >= 60 || (NewRecords.Count == 0 &&
+                    Review10Records.Count == 0) || State == VocabBuilderViewModelState.Review60) {
+
+                    if (Review60Records.Count != 1) State = VocabBuilderViewModelState.Review60;
+                    else State = VocabBuilderViewModelState.New;
+
+                    return Review60Records[0];
+                }
                 else if (NewRecords.Count != 0) {
+                    State = VocabBuilderViewModelState.New;
                     return NewRecords[0];
                 }
+                // Done for today!
                 else {
                     return null;
                 }
@@ -48,7 +85,7 @@ namespace GREVocab {
         }
 
         public ICommand RecognizedCommand;
-        public ICommand NotRecognizedCommand;
+        public ICommand UnrecognizedCommand;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -60,10 +97,111 @@ namespace GREVocab {
             Conn.CreateTable<Record>();
 
             // Initializing values
-            Reviewing = true;
+            State = VocabBuilderViewModelState.Review;
             ReviewRecords = new List<Record>();
             NewRecords = new List<Record>();
+
+            // Attaching handler to commands
+            RecognizedCommand = new Command(execute: RecognizedCommandHandler);
+            UnrecognizedCommand = new Command(execute: UnrecognizedCommandHandler);
         }
+
+        private void RecognizedCommandHandler() {
+            Record r = CurrentRecord;
+            PopCurrentHead();
+
+            // Depending on the current State, different behavior ensues.
+            switch (State) {
+                case VocabBuilderViewModelState.New:
+                    RandomInsert(r, Review10Records);
+                    break;
+                case VocabBuilderViewModelState.Review:
+                    // We are done with this word for today. Schedule this word
+                    // for further review if necessary.
+                    ScheduleNextReview(r);
+                    break;
+                case VocabBuilderViewModelState.Review10:
+                    // Put this in the 60 review bin.
+                    RandomInsert(r, Review60Records);
+                    break;
+                case VocabBuilderViewModelState.Review60:
+                    // Done with this word for today.
+                    ScheduleNextReview(r);
+                    break;
+            }
+        }
+
+        /*
+         * Helper function to insert an item (source) into a list
+         * (target) to a random position.
+         */
+        private void RandomInsert<T>(T source, List<T> target) {
+            int ind = new Random().Next(0, target.Count);
+            target.Add(target[ind]);
+            target[ind] = source;
+        }
+
+        private void UnrecognizedCommandHandler() {
+            // No matter which State, insert this record into NewRecords
+            // at a random position
+            RandomInsert(CurrentRecord, NewRecords);
+            PopCurrentHead();
+        }
+
+        /*
+         * Helper method to pop the head of the List<Record> object from
+         * which CurrentRecord is obtained. In effect, CurrentRecord is popped.
+         */
+        private void PopCurrentHead() {
+            switch (State) {
+                case VocabBuilderViewModelState.New:
+                    NewRecords.RemoveAt(0);
+                    break;
+                case VocabBuilderViewModelState.Review:
+                    ReviewRecords.RemoveAt(0);
+                    break;
+                case VocabBuilderViewModelState.Review10:
+                    Review10Records.RemoveAt(0);
+                    break;
+                case VocabBuilderViewModelState.Review60:
+                    Review60Records.RemoveAt(0);
+                    break;
+            }
+        }
+
+        /*
+         * Helper method to update the database to set the next review
+         * date based on TimesStudied. Also updates TimesStudied
+         */
+        private void ScheduleNextReview(Record r) {
+            switch (r.TimesStudied) {
+                case 0:  // 12 hours
+                    r.NextSchedule = DateTime.Now + new TimeSpan(12, 0, 0);
+                    break;
+                case 1:  // 1 day
+                    r.NextSchedule = DateTime.Now + new TimeSpan(1, 0, 0, 0, 0);
+                    break;
+                case 2:  // 2 days
+                    r.NextSchedule = DateTime.Now + new TimeSpan(2, 0, 0, 0, 0);
+                    break;
+                case 3:  // 4 days
+                    r.NextSchedule = DateTime.Now + new TimeSpan(4, 0, 0, 0, 0);
+                    break;
+                case 4:  // 7 days
+                    r.NextSchedule = DateTime.Now + new TimeSpan(7, 0, 0, 0, 0);
+                    break;
+                case 5:  // 15 days
+                    r.NextSchedule = DateTime.Now + new TimeSpan(15, 0, 0, 0, 0);
+                    break;
+                default:  // Mark done with 100 years difference
+                    r.NextSchedule = DateTime.Now + new TimeSpan(365 * 10, 0, 0, 0, 0);
+                    break;
+            }
+
+            r.TimesStudied += 1;
+            Conn.Update(r);
+        }
+
 
         /*
          * Loads from database all the words scheduled to be reviewed
@@ -125,7 +263,7 @@ namespace GREVocab {
             Conn.DropTable<Record>();
             Conn.CreateTable<Record>();
 
-            // Load data.json
+            // Loads data.json
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(VocabBuilderViewModel)).Assembly;
             Stream stream = assembly.GetManifestResourceStream("GREVocab.data.json");
 
@@ -140,7 +278,7 @@ namespace GREVocab {
                 Conn.Insert(new Record {
                     Json = JsonConvert.SerializeObject(word),
                     NextSchedule = DateTime.Now - new TimeSpan(1, 0, 0, 0, 0),
-                    TimesMemorized = 0
+                    TimesStudied = 0
                 });
             }
         }

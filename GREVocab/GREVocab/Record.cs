@@ -13,7 +13,7 @@ namespace GREVocab {
         public int Id { get; set; }
         public string Json { get; set; }
         public DateTime NextSchedule { get; set; }
-        public int TimesMemorized { get; set; }
+        public int TimesStudied { get; set; }
 
         private Word Word = null;
 
