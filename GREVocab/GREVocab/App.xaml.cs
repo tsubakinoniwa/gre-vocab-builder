@@ -8,6 +8,8 @@ namespace GREVocab {
             InitializeComponent();
 
             MainPage = new MainPage();
+            VocabBuilderViewModel vm = new VocabBuilderViewModel();
+            vm.InitDatabase();
         }
 
         protected override void OnStart() {

@@ -1,5 +1,6 @@
 ﻿using System;
 using SQLite;
+using Newtonsoft.Json;
 
 namespace GREVocab {
     /*
@@ -12,5 +13,15 @@ namespace GREVocab {
         public int Id { get; set; }
         public string Json { get; set; }
         public DateTime LastMemorized { get; set; }
+        public int TimesMemorized { get; set; }
+
+        private Word Word = null;
+
+        public Word GetWord() {
+            if (Word == null) {
+                Word = JsonConvert.DeserializeObject<Word>(Json);
+            }
+            return Word;
+        }
     }
 }
