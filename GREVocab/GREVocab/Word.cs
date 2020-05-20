@@ -10,7 +10,7 @@ namespace GREVocab {
      * the Json string in Record will expand into
      */
     public class Word : INotifyPropertyChanged {
-        public int Id;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         [JsonProperty("word")]
         public string content;
@@ -26,41 +26,6 @@ namespace GREVocab {
         public string[] greSynonyms;
         public string[] GRESynonyms {
             get { return greSynonyms; }
-        }
-
-        private int timesStudied;
-        public int TimesStudied {
-            get { return timesStudied; }
-            set {
-                timesStudied = value;
-                OnPropertyChanged();
-                OnPropertyChanged("Color1");
-                OnPropertyChanged("Color2");
-                OnPropertyChanged("Color3");
-                OnPropertyChanged("Color4");
-                OnPropertyChanged("Color5");
-                OnPropertyChanged("Color6");
-            }
-        }
-
-        // Some color properties for the display of progress
-        public Color Color1 {
-            get { return timesStudied > 0 ? Color.Green : Color.LightGray; }
-        }
-        public Color Color2 {
-            get { return timesStudied > 1 ? Color.Green : Color.LightGray; }
-        }
-        public Color Color3 {
-            get { return timesStudied > 2 ? Color.Green : Color.LightGray; }
-        }
-        public Color Color4 {
-            get { return timesStudied > 3 ? Color.Green : Color.LightGray; }
-        }
-        public Color Color5 {
-            get { return timesStudied > 4 ? Color.Green : Color.LightGray; }
-        }
-        public Color Color6 {
-            get { return timesStudied > 5 ? Color.Green : Color.LightGray; }
         }
 
         // Short Definition for Words List Page
@@ -79,12 +44,6 @@ namespace GREVocab {
                 }
                 return res.Substring(2);  // Remove the starting "; "
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged([CallerMemberName] string propertyName = "") {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public override string ToString() {

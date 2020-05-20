@@ -39,7 +39,6 @@ namespace GREVocab {
             }
         }
 
-
         public int NewWordsPerDay {
             get {
                 return Preferences.Get("NewWordsPerDay", 120);
@@ -93,7 +92,7 @@ namespace GREVocab {
 
         public Word DisplayWord {
             get {
-                return CurrentRecord.GetWord();
+                return CurrentRecord.Word;
             }
         }
 
@@ -131,19 +130,17 @@ namespace GREVocab {
             // Attaching handler to commands
             RecognizedCommand = new Command(execute: () => RecognizedCommandHandler());
             UnrecognizedCommand = new Command(execute: () => UnrecognizedCommandHandler());
-            TooEasyCommand = new Command(execute: (w) => TooEasyCommandHandler((Word)w));
-            ResetWordCommand = new Command(execute: (w) => ResetWordCommandHandler((Word)w));
+            TooEasyCommand = new Command(execute: (r) => TooEasyCommandHandler((Record)r));
+            ResetWordCommand = new Command(execute: (r) => ResetWordCommandHandler((Record)r));
         }
 
-        private void TooEasyCommandHandler(Word w) {
-            Record r = Conn.Table<Record>().Where(x => x.Id == w.Id).FirstOrDefault();
+        private void TooEasyCommandHandler(Record r) {
             r.TimesStudied = 6;
             r.NextSchedule = DateTime.Now + new TimeSpan(365 * 100, 0, 0, 0, 0);
             Conn.Update(r);
         }
 
-        private void ResetWordCommandHandler(Word w) {
-            Record r = Conn.Table<Record>().Where(x => x.Id == w.Id).FirstOrDefault();
+        private void ResetWordCommandHandler(Record r) {
             r.TimesStudied = 0;
             r.NextSchedule = DateTime.Now - new TimeSpan(1, 0, 0, 0, 0);
             Conn.Update(r);
@@ -324,6 +321,10 @@ namespace GREVocab {
                     TimesStudied = 0
                 });
             }
+
+            // Refresh the saved records
+            GetAllRecords();
+            OnPropertyChanged("AllRecords");
         }
 
         private void GetAllRecords() {
@@ -333,17 +334,6 @@ namespace GREVocab {
                 allRecords.Add(r);
             }
         }
-
-        //public ObservableCollection<Word> GetAllWords() {
-        //    if (AllRecords == null) GetAllRecords();
-
-        //    var res = new ObservableCollection<Word>();
-        //    foreach (var r in AllRecords) {
-        //        res.Add(r.GetWord());
-        //    }
-
-        //    return res;
-        //}
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = "") {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

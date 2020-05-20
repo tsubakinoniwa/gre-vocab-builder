@@ -18,24 +18,24 @@
                                     <ColumnDefinition Width="1*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="{Binding Content, Path=Word}" VerticalOptions="Center"
+                                <Label Text="{Binding Word.Content}" VerticalOptions="Center"
                                    Grid.Row="0" Grid.Column="0"/>
 
                                 <StackLayout Orientation="Horizontal" VerticalOptions="Center"
                                              Grid.Row="0" Grid.Column="1" Spacing="2"
                                              Margin="0, 0, 10, 0">
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Word.Color1}"/>
+                                             Color="{Binding Color1}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Word.Color2}"/>
+                                             Color="{Binding Color2}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Word.Color3}"/>
+                                             Color="{Binding Color3}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Word.Color4}"/>
+                                             Color="{Binding Color4}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Word.Color5}"/>
+                                             Color="{Binding Color5}"/>
                                     <BoxView WidthRequest="10" HeightRequest="10"
-                                             Color="{Binding Word.Color6}"/>
+                                             Color="{Binding Color6}"/>
                                     <!--<BoxView WidthRequest="10" HeightRequest="10"
                                              Color="White"/>-->
                                 </StackLayout>
