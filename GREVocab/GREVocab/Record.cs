@@ -12,7 +12,7 @@ namespace GREVocab {
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int Id { get; set; }
         public string Json { get; set; }
-        public DateTime LastMemorized { get; set; }
+        public DateTime NextSchedule { get; set; }
         public int TimesMemorized { get; set; }
 
         private Word Word = null;
