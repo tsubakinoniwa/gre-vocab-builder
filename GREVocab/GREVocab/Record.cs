@@ -20,6 +20,7 @@ namespace GREVocab {
         public Word GetWord() {
             if (Word == null) {
                 Word = JsonConvert.DeserializeObject<Word>(Json);
+                Word.timesStudied = TimesStudied;
             }
             return Word;
         }

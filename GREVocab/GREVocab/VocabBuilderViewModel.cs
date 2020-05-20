@@ -296,6 +296,10 @@ namespace GREVocab {
             }
         }
 
+        public List<Record> LoadAllRecords() {
+            return Conn.Table<Record>().ToList();
+        }
+
         private void OnPropertyChanged([CallerMemberName] string propertyName = "") {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

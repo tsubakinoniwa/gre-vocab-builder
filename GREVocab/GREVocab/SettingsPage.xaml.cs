@@ -17,6 +17,8 @@ namespace GREVocab {
         }
 
         protected override void OnAppearing() {
+            base.OnAppearing();
+
             // Set the view model here since we can guarantee the binding
             // context has been initialized
             ViewModel = (VocabBuilderViewModel)BindingContext;
