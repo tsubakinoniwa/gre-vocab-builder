@@ -99,7 +99,9 @@ namespace GREVocab {
             // Initializing values
             State = VocabBuilderViewModelState.Review;
             ReviewRecords = new List<Record>();
+            LoadReviewWords();
             NewRecords = new List<Record>();
+            LoadNewWords();
 
             // Attaching handler to commands
             RecognizedCommand = new Command(execute: RecognizedCommandHandler);
@@ -201,7 +203,6 @@ namespace GREVocab {
             r.TimesStudied += 1;
             Conn.Update(r);
         }
-
 
         /*
          * Loads from database all the words scheduled to be reviewed
