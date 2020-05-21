@@ -16,8 +16,10 @@ namespace GREVocab {
             base.OnAppearing();
 
             // Loop to keep pushing new words
-            if (ViewModel.DisplayRecord != null) {
-                await Navigation.PushAsync(new WordDetailPage(ViewModel.DisplayRecord, false));
+            Record r = ViewModel.DisplayRecord;
+            if (r != null) {
+                await Navigation.PushAsync(new WordDetailPage(r, false));
+                await TextToSpeech.SpeakAsync(r.Word.Content);
             }
             else {
                 Result.IsVisible = true;
