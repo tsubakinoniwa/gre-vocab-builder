@@ -6,21 +6,24 @@
             xmlns:local="clr-namespace:GREVocab;assembly=GREVocab">
 
     <!--Overview of today's objectives-->
-    <NavigationPage Title="Overview" ios:NavigationPage.PrefersLargeTitles="false">
+    <NavigationPage Title="Overview" ios:NavigationPage.PrefersLargeTitles="false"
+                    IconImageSource="Glasses">
         <x:Arguments>
             <local:OverviewPage Title="Overview" ios:Page.LargeTitleDisplay="Never"/>
         </x:Arguments>
     </NavigationPage>
 
     <!--Page with all words in the list-->
-    <NavigationPage Title="Words List" ios:NavigationPage.PrefersLargeTitles="true">
+    <NavigationPage Title="Words List" ios:NavigationPage.PrefersLargeTitles="true"
+                    IconImageSource="Book">
         <x:Arguments>
             <local:AllWordsPage Title="Words List"/>
         </x:Arguments>
     </NavigationPage>
 
     <!--Settings Page-->
-    <NavigationPage Title="Settings" ios:NavigationPage.PrefersLargeTitles="true">
+    <NavigationPage Title="Settings" ios:NavigationPage.PrefersLargeTitles="true"
+                    IconImageSource="Gear">
         <x:Arguments>
             <local:SettingsPage Title="Settings"/>
         </x:Arguments>

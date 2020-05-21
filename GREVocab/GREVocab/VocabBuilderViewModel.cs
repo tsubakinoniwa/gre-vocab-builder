@@ -147,10 +147,6 @@ namespace GREVocab {
 
             // Initializing values
             State = VocabBuilderViewModelState.Review;
-            //ReviewRecords = new List<Record>();
-            //LoadReviewWords();
-            //NewRecords = new List<Record>();
-            //LoadNewWords();
 
             // Attaching handler to commands
             RecognizedCommand = new Command(execute: () => RecognizedCommandHandler());
@@ -158,6 +154,9 @@ namespace GREVocab {
             TooEasyCommand = new Command(execute: (r) => TooEasyCommandHandler((Record)r));
             ResetWordCommand = new Command(execute: (r) => ResetWordCommandHandler((Record)r));
             ReloadNewWordsCommand = new Command(execute: () => ReloadNewWordsCommandHandler());
+
+            // Demo
+            //Demo();
         }
 
         private void TooEasyCommandHandler(Record r) {
@@ -281,10 +280,10 @@ namespace GREVocab {
          * today. This is calculated based on NextSchedule.
          */
         public void LoadReviewWords() {
-            DateTime today = DateTime.Now.Date;
+            DateTime today = DateTime.Now;
             ReviewRecords = new List<Record>();
             ReviewRecords = AllRecords.Where(
-                x => x.NextSchedule.Date.CompareTo(today) == 0).ToList();
+                x => x.NextSchedule.CompareTo(today) == 0).ToList();
         }
 
         /*
@@ -294,7 +293,7 @@ namespace GREVocab {
         public void LoadNewWords() {
             // All the unencountered words will have next scheduled date
             // earlier than any date since the last call to InitDatabase().
-            DateTime today = DateTime.Now.Date;
+            //DateTime today = DateTime.Now.Date;
             NewRecords = new List<Record>();
             var allNewRecords = AllRecords.Where(x => x.TimesStudied == 0).ToList();
 
@@ -338,7 +337,6 @@ namespace GREVocab {
          * Completely wipes all exisiting records.
          */
         public async Task ResetViewModel() {
-            Console.WriteLine("InitDB");
             Conn.DropTable<Record>();
             Conn.CreateTable<Record>();
 
@@ -358,6 +356,34 @@ namespace GREVocab {
                     Json = JsonConvert.SerializeObject(word),
                     NextSchedule = DateTime.Now - new TimeSpan(1, 0, 0, 0, 0),
                     TimesStudied = 0
+                });
+            }
+
+            // Refresh the saved records
+            GetAllRecords();
+            OnPropertyChanged("AllRecords");
+        }
+
+        private void Demo() {
+            Conn.DropTable<Record>();
+            Conn.CreateTable<Record>();
+
+            // Loads data.json
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(VocabBuilderViewModel)).Assembly;
+            Stream stream = assembly.GetManifestResourceStream("GREVocab.data.json");
+
+            string data = "";
+            using (var reader = new StreamReader(stream)) {
+                data = reader.ReadToEndAsync().Result;
+            }
+
+            // Deserialize and re-serialize to insert into DB
+            Word[] words = JsonConvert.DeserializeObject<Word[]>(data);
+            foreach (var word in words) {
+                Conn.Insert(new Record {
+                    Json = JsonConvert.SerializeObject(word),
+                    NextSchedule = DateTime.Now - new TimeSpan(1, 0, 0, 0, 0),
+                    TimesStudied = new Random().Next(0, 7)
                 });
             }
 

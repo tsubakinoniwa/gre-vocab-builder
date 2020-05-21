@@ -90,7 +90,7 @@ namespace GREVocab {
                 if (d.Synonyms.Length != 0) {
                     g.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
                     g.Children.Add(new Label {
-                        Text = d.Synonyms.Length == 1 ? "SYNONYMS" : "SYNONYMS",
+                        Text = d.Synonyms.Length == 1 ? "SYNONYM" : "SYNONYMS",
                         TextColor = Color.Gray,
                         FontSize = Device.GetNamedSize(NamedSize.Small, new Label()),
                         VerticalOptions = LayoutOptions.Center,
