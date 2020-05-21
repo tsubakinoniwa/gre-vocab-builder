@@ -35,7 +35,9 @@ namespace GREVocab {
                 "Confirm Reset? This operation is irreversible.",
                 "Cancel", "Confirm Reset");
             if (action.Equals("Confirm Reset")) {
-                await ViewModel.InitDatabase();
+                await ViewModel.ResetViewModel();
+                Preferences.Set("LastCompleted", DateTime.Now.Date - new TimeSpan(24, 0, 0));
+                Preferences.Set("TodayLoaded", false);
             }
         }
     }

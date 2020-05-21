@@ -24,10 +24,10 @@ namespace GREVocab {
         private SQLiteConnection Conn;
         private VocabBuilderViewModelState State;
 
-        public List<Record> ReviewRecords;
-        public List<Record> NewRecords;
-        public List<Record> Review10Records;
-        public List<Record> Review60Records;
+        public List<Record> ReviewRecords { get; set; }
+        public List<Record> NewRecords { get; set; }
+        public List<Record> Review10Records { get; set; }
+        public List<Record> Review60Records { get; set; }
 
         private ObservableCollection<Record> allRecords = null;
         public ObservableCollection<Record> AllRecords {
@@ -44,8 +44,11 @@ namespace GREVocab {
                 return Preferences.Get("NewWordsPerDay", 120);
             }
             set {
-                Preferences.Set("NewWordsPerDay", value);
-                OnPropertyChanged();
+                if (value != NewWordsPerDay) {
+                    Preferences.Set("NewWordsPerDay", value);
+                    Preferences.Set("TodayLoaded", false);
+                    OnPropertyChanged();
+                }
             }
         }
 
@@ -90,6 +93,12 @@ namespace GREVocab {
             }
         }
 
+        public Record DisplayRecord {
+            get {
+                return CurrentRecord;
+            }
+        }
+
         public Word DisplayWord {
             get {
                 return CurrentRecord.Word;
@@ -102,7 +111,26 @@ namespace GREVocab {
             }
             set {
                 Preferences.Set("Shuffle", value);
+                Preferences.Set("TodayLoaded", false);  // Invalidate loaded
                 OnPropertyChanged();
+            }
+        }
+
+        public int StudiedCount {
+            get {
+                return AllRecords.Where(x => x.TimesStudied >= 1).Count();
+            }
+        }
+
+        public int CompletedCount {
+            get {
+                return AllRecords.Where(x => x.TimesStudied >= 6).Count();
+            }
+        }
+
+        public int TotalCount {
+            get {
+                return AllRecords.Count;
             }
         }
 
@@ -110,6 +138,7 @@ namespace GREVocab {
         public ICommand UnrecognizedCommand { get; set; }
         public ICommand TooEasyCommand { get; set; }
         public ICommand ResetWordCommand { get; set; }
+        public ICommand ReloadNewWordsCommand { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -132,6 +161,7 @@ namespace GREVocab {
             UnrecognizedCommand = new Command(execute: () => UnrecognizedCommandHandler());
             TooEasyCommand = new Command(execute: (r) => TooEasyCommandHandler((Record)r));
             ResetWordCommand = new Command(execute: (r) => ResetWordCommandHandler((Record)r));
+            ReloadNewWordsCommand = new Command(execute: () => ReloadNewWordsCommandHandler());
         }
 
         private void TooEasyCommandHandler(Record r) {
@@ -248,7 +278,8 @@ namespace GREVocab {
          */
         public void LoadReviewWords() {
             DateTime today = DateTime.Now.Date;
-            ReviewRecords = Conn.Table<Record>().ToList().Where(
+            ReviewRecords = new List<Record>();
+            ReviewRecords = AllRecords.Where(
                 x => x.NextSchedule.Date.CompareTo(today) == 0).ToList();
         }
 
@@ -260,8 +291,8 @@ namespace GREVocab {
             // All the unencountered words will have next scheduled date
             // earlier than any date since the last call to InitDatabase().
             DateTime today = DateTime.Now.Date;
-            var allNewRecords = Conn.Table<Record>().ToList().Where(
-                x => x.NextSchedule.Date.CompareTo(today) < 0).ToList();
+            NewRecords = new List<Record>();
+            var allNewRecords = AllRecords.Where(x => x.TimesStudied == 0).ToList();
 
             if (allNewRecords.Count < NewWordsPerDay) {
                 NewRecords = allNewRecords;
@@ -293,12 +324,16 @@ namespace GREVocab {
             }
         }
 
+        private void ReloadNewWordsCommandHandler() {
+            LoadNewWords();
+        }
+
 
         /* 
          * Initializes the database with data populated from data.json.
          * Completely wipes all exisiting records.
          */
-        public async Task InitDatabase() {
+        public async Task ResetViewModel() {
             Console.WriteLine("InitDB");
             Conn.DropTable<Record>();
             Conn.CreateTable<Record>();

@@ -2,52 +2,54 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GREVocab.SettingsPage">
     <ContentPage.Content>
-        <Grid Padding="20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>
+        <ScrollView>
+            <Grid Padding="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
 
-            <!--Elements assoc. to setting new words per day-->
-            <Label Text="NEW WORDS PER DAY" Style="{StaticResource GroupHeader}"
+                <!--Elements assoc. to setting new words per day-->
+                <Label Text="NEW WORDS PER DAY" Style="{StaticResource GroupHeader}"
                    Grid.Row="0" Grid.Column="0"/>
-            <Slider Maximum="200" Minimum="50" VerticalOptions="Center"
+                <Slider Maximum="200" Minimum="50" VerticalOptions="Center"
                     x:Name="NewWordsPerDay" WidthRequest="10000"
                     ValueChanged="NewWordsPerDay_ValueChanged"
                     Grid.Row="1" Grid.Column="0"/>
-            <Label Text="{Binding NewWordsPerDay}" VerticalOptions="Center"
+                <Label Text="{Binding NewWordsPerDay}" VerticalOptions="Center"
                    Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>
 
-            <!--Clear-->
-            <BoxView HeightRequest="20" Grid.Row="2" Grid.Column="0"/>
+                <!--Clear-->
+                <BoxView HeightRequest="20" Grid.Row="2" Grid.Column="0"/>
 
-            <!--Elements assoc. to setting shuffled-->
-            <Label Text="Shuffle Words" Grid.Row="3" Grid.Column="0"
+                <!--Elements assoc. to setting shuffled-->
+                <Label Text="Shuffle Words" Grid.Row="3" Grid.Column="0"
                    VerticalOptions="Center"/>
-            <Switch x:Name="Shuffle" IsToggled="{Binding Shuffle, Mode=TwoWay}"
+                <Switch x:Name="Shuffle" IsToggled="{Binding Shuffle, Mode=TwoWay}"
                     Grid.Row="3" Grid.Column="1"/>
-            <Label x:Name="ShuffleDescription" Style="{StaticResource GroupHeader}"
+                <Label x:Name="ShuffleDescription" Style="{StaticResource GroupHeader}"
                    Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-            <!--Clear-->
-            <BoxView HeightRequest="25" Grid.Row="5" Grid.Column="0"/>
+                <!--Clear-->
+                <BoxView HeightRequest="25" Grid.Row="5" Grid.Column="0"/>
 
-            <!--Reset Button-->
-            <Button Style="{StaticResource WarnButtonStyle}" Text="Reset Progress"
+                <!--Reset Button-->
+                <Button Style="{StaticResource WarnButtonStyle}" Text="Reset Progress"
                     Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
                     x:Name="ResetButton" Clicked="ResetButton_Clicked"/>
-            <Label x:Name="ResetDescription" Style="{StaticResource GroupHeader}"
+                <Label x:Name="ResetDescription" Style="{StaticResource GroupHeader}"
                    Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
-        </Grid>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
