@@ -27,6 +27,7 @@ namespace GREVocab {
             DateTime today = DateTime.Now;
             if (!Preferences.Get("TodayLoaded", false)) {
                 // If we are ready to learn new words, load new words.
+                Console.WriteLine(Preferences.Get("LastCompleted", today.Date - new TimeSpan(24, 0, 0)));
                 if (Preferences.Get("LastCompleted", today.Date - new TimeSpan(
                     24, 0, 0)).CompareTo(today.Date) < 0) {
                     ViewModel.LoadNewWords();
@@ -59,6 +60,10 @@ namespace GREVocab {
                 HeightRequest = 20,
                 HorizontalOptions = LayoutOptions.Start,
             }, 0, 3, 5, 6);
+        }
+
+        async void StartButton_Clicked(object sender, EventArgs e) {
+            await Navigation.PushAsync(new WordDetailWrapperPage());
         }
     }
 }

@@ -40,12 +40,18 @@
             <!--Will add another grid of definitions here programatically-->
 
             <!--Buttons that will appear during study time-->
-            <StackLayout x:Name="StudyButtonsStack" Grid.Row="3" Grid.Column="0"
+            <StackLayout x:Name="RevealButtonStack" Grid.Row="3" Grid.Column="0"
                          IsVisible="True">
+                <Button Style="{StaticResource DefaultButtonStyleVariant}"
+                        Text="Reveal Definition" x:Name="RevealButton" Clicked="RevealButton_Clicked"/>
+            </StackLayout>
+
+            <StackLayout x:Name="StudyButtonsStack" Grid.Row="3" Grid.Column="0"
+                         IsVisible="False">
                 <Button Command="{Binding RecognizedCommand}" Text="Recalled Correctly"
-                        Style="{StaticResource DefaultButtonStyleVariant}"/>
+                        Style="{StaticResource DefaultButtonStyleVariant}" Clicked="UpdateWord"/>
                 <Button Command="{Binding UnrecognizedCommand}" Text="Did Not Remember"
-                        Style="{StaticResource WarnButtonStyleVariant}"/>
+                        Style="{StaticResource WarnButtonStyleVariant}" Clicked="UpdateWord"/>
             </StackLayout>
 
             <!--Buttons that will appear in word list mode-->

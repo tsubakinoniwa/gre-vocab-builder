@@ -5,8 +5,9 @@ using Xamarin.Forms.Xaml;
 
 namespace GREVocab {
     public partial class App : Application {
-        public static VocabBuilderViewModel ViewModel = new VocabBuilderViewModel();
+        public static VocabBuilderViewModel ViewModel;
         public App() {
+            ViewModel = new VocabBuilderViewModel();
             InitializeComponent();
             MainPage = new HomePage();
             BindingContext = ViewModel;

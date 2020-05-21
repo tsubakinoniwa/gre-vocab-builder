@@ -22,7 +22,7 @@
                 <!--Elements assoc. to setting new words per day-->
                 <Label Text="NEW WORDS PER DAY" Style="{StaticResource GroupHeader}"
                    Grid.Row="0" Grid.Column="0"/>
-                <Slider Maximum="200" Minimum="50" VerticalOptions="Center"
+                <Slider Maximum="200" Minimum="2" VerticalOptions="Center"
                     x:Name="NewWordsPerDay" WidthRequest="10000"
                     ValueChanged="NewWordsPerDay_ValueChanged"
                     Grid.Row="1" Grid.Column="0"/>

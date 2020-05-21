@@ -22,12 +22,12 @@ namespace GREVocab {
     }
     public class VocabBuilderViewModel : INotifyPropertyChanged {
         private SQLiteConnection Conn;
-        private VocabBuilderViewModelState State;
+        private VocabBuilderViewModelState State = VocabBuilderViewModelState.Review;
 
-        public List<Record> ReviewRecords { get; set; }
-        public List<Record> NewRecords { get; set; }
-        public List<Record> Review10Records { get; set; }
-        public List<Record> Review60Records { get; set; }
+        public List<Record> ReviewRecords { get; set; } = new List<Record>();
+        public List<Record> NewRecords { get; set; } = new List<Record>();
+        public List<Record> Review10Records { get; set; } = new List<Record>();
+        public List<Record> Review60Records { get; set; } = new List<Record>();
 
         private ObservableCollection<Record> allRecords = null;
         public ObservableCollection<Record> AllRecords {
@@ -55,31 +55,27 @@ namespace GREVocab {
         private Record CurrentRecord {
             get {
                 // We start by going through all the review words.
-                if (State == VocabBuilderViewModelState.Review && ReviewRecords.Count != 0) {
-                    if (ReviewRecords.Count != 1) State = VocabBuilderViewModelState.Review;
-                    else State = VocabBuilderViewModelState.New;
-
+                if (ReviewRecords.Count != 0) {
+                    State = VocabBuilderViewModelState.Review;
                     return ReviewRecords[0];
                 }
                 // Whenever the bucket for most recent 10 words is filled,
                 // start reviewing those until they are exhausted.
-                else if (Review10Records.Count == 10 || NewRecords.Count == 0 ||
-                    State == VocabBuilderViewModelState.Review10) {
+                else if ((Review10Records.Count == 10 || NewRecords.Count == 0 ||
+                    State == VocabBuilderViewModelState.Review10) &&
+                    Review10Records.Count != 0) {
 
-                    if (Review10Records.Count != 1) State = VocabBuilderViewModelState.Review10;
-                    else State = VocabBuilderViewModelState.New;
-
+                    State = VocabBuilderViewModelState.Review10;
                     return Review10Records[0];
                 }
                 // Whenever the bucket for the most recent 60 words is filled,
                 // (note that we can overfill, unlike the most recent 10 words),
                 // start reviewing those until they are exhausted.
-                else if (Review60Records.Count >= 60 || (NewRecords.Count == 0 &&
-                    Review10Records.Count == 0) || State == VocabBuilderViewModelState.Review60) {
+                else if ((Review60Records.Count >= 60 || (NewRecords.Count == 0 &&
+                    Review10Records.Count == 0) || State == VocabBuilderViewModelState.Review60)
+                    && Review60Records.Count != 0) {
 
-                    if (Review60Records.Count != 1) State = VocabBuilderViewModelState.Review60;
-                    else State = VocabBuilderViewModelState.New;
-
+                    State = VocabBuilderViewModelState.Review60;
                     return Review60Records[0];
                 }
                 else if (NewRecords.Count != 0) {
@@ -151,10 +147,10 @@ namespace GREVocab {
 
             // Initializing values
             State = VocabBuilderViewModelState.Review;
-            ReviewRecords = new List<Record>();
-            LoadReviewWords();
-            NewRecords = new List<Record>();
-            LoadNewWords();
+            //ReviewRecords = new List<Record>();
+            //LoadReviewWords();
+            //NewRecords = new List<Record>();
+            //LoadNewWords();
 
             // Attaching handler to commands
             RecognizedCommand = new Command(execute: () => RecognizedCommandHandler());
@@ -199,6 +195,9 @@ namespace GREVocab {
                     ScheduleNextReview(r);
                     break;
             }
+
+            Console.WriteLine(State);
+            Console.WriteLine($"{NewRecords.Count} {ReviewRecords.Count} {Review10Records.Count} {Review60Records.Count}");
         }
 
         /*
@@ -206,9 +205,14 @@ namespace GREVocab {
          * (target) to a random position.
          */
         private void RandomInsert<T>(T source, List<T> target) {
-            int ind = new Random().Next(0, target.Count);
-            target.Add(target[ind]);
-            target[ind] = source;
+            if (target.Count == 0) {
+                target.Add(source);
+            }
+            else {
+                int ind = new Random().Next(0, target.Count);
+                target.Add(target[ind]);
+                target[ind] = source;
+            }
         }
 
         private void UnrecognizedCommandHandler() {

@@ -69,5 +69,9 @@ namespace GREVocab {
         private void OnPropertyChanged([CallerMemberName] string propertyName = "") {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public override string ToString() {
+            return Word.Content;
+        }
     }
 }

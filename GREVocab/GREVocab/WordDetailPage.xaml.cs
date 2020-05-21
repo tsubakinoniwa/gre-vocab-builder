@@ -13,6 +13,10 @@ namespace GREVocab {
         }
 
         public WordDetailPage(Record r, bool wordsListMode = false) {
+            InitPage(r, wordsListMode);
+        }
+
+        public void InitPage(Record r, bool wordsListMode = false) {
             Record = r;
             BindingContext = App.ViewModel;
 
@@ -20,10 +24,14 @@ namespace GREVocab {
 
             // Choose the correct button layout to load
             if (wordsListMode) {
+                RevealButtonStack.IsVisible = false;
                 StudyButtonsStack.IsVisible = false;
                 ControlButtonsStack.IsVisible = true;
+                AddDefinition();
             }
-            AddDefinition();
+            else {
+                RevealButtonStack.IsVisible = true;
+            }
         }
 
         /*
@@ -129,6 +137,17 @@ namespace GREVocab {
             }
 
             OuterGrid.Children.Add(g, 0, 2);
+        }
+
+        void RevealButton_Clicked(object sender, EventArgs e) {
+            RevealButtonStack.IsVisible = false;
+            StudyButtonsStack.IsVisible = true;
+            ControlButtonsStack.IsVisible = false;
+            AddDefinition();
+        }
+
+        async void UpdateWord(object sender, EventArgs e) {
+            await Navigation.PopAsync();
         }
     }
 }
