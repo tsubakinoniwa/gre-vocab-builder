@@ -27,6 +27,8 @@ namespace GREVocab {
                 RevealButtonStack.IsVisible = false;
                 StudyButtonsStack.IsVisible = false;
                 ControlButtonsStack.IsVisible = true;
+
+                QuitButton.IsVisible = false;
                 AddDefinition();
             }
             else {
@@ -148,6 +150,15 @@ namespace GREVocab {
 
         async void UpdateWord(object sender, EventArgs e) {
             await Navigation.PopAsync();
+        }
+
+        async void QuitButton_Clicked(object sender, EventArgs e) {
+            bool choice = await DisplayAlert("Be Careful", "If the app is closed " +
+                "before you finish today's words, your progress will be lost.",
+                "Quit", "Cancel");
+            if (choice) {
+                await Navigation.PopToRootAsync();
+            }
         }
     }
 }
