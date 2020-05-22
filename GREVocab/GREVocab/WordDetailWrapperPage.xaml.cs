@@ -23,7 +23,11 @@ namespace GREVocab {
             }
             else {
                 Result.IsVisible = true;
-                Preferences.Set("LastCompleted", DateTime.Now);
+                if (Preferences.Get("LastCompleted", DateTime.Now).Date.CompareTo(
+                    DateTime.Now.Date) != 0) {
+                    // Only set this flag when we are not reviewing today's words
+                    Preferences.Set("LastCompleted", DateTime.Now);
+                }
                 Preferences.Set("TodayLoaded", false);
             }
         }
