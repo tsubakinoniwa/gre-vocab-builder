@@ -167,7 +167,7 @@ namespace GREVocab {
 
         private void ResetWordCommandHandler(Record r) {
             r.TimesStudied = 0;
-            r.NextSchedule = DateTime.Now - new TimeSpan(1, 0, 0, 0, 0);
+            r.NextSchedule = DateTime.Now + new TimeSpan(365 * 100, 0, 0, 0, 0);
             Conn.Update(r);
         }
 
@@ -267,7 +267,7 @@ namespace GREVocab {
                     r.NextSchedule = DateTime.Now + new TimeSpan(8, 0, 0, 0, 0);
                     break;
                 default:  // Mark done with 100 years difference
-                    r.NextSchedule = DateTime.Now + new TimeSpan(365 * 10, 0, 0, 0, 0);
+                    r.NextSchedule = DateTime.Now + new TimeSpan(365 * 100, 0, 0, 0, 0);
                     break;
             }
 
@@ -283,7 +283,7 @@ namespace GREVocab {
             DateTime today = DateTime.Now;
             ReviewRecords = new List<Record>();
             ReviewRecords = AllRecords.Where(
-                x => x.NextSchedule.CompareTo(today) == 0).ToList();
+                x => x.NextSchedule.CompareTo(today) < 0).ToList();
         }
 
         /*
@@ -291,8 +291,6 @@ namespace GREVocab {
          * there are still enough words to load.
          */
         public void LoadNewWords() {
-            // All the unencountered words will have next scheduled date
-            // earlier than any date since the last call to InitDatabase().
             //DateTime today = DateTime.Now.Date;
             NewRecords = new List<Record>();
             var allNewRecords = AllRecords.Where(x => x.TimesStudied == 0).ToList();
@@ -354,7 +352,7 @@ namespace GREVocab {
             foreach (var word in words) {
                 Conn.Insert(new Record {
                     Json = JsonConvert.SerializeObject(word),
-                    NextSchedule = DateTime.Now - new TimeSpan(1, 0, 0, 0, 0),
+                    NextSchedule = DateTime.Now + new TimeSpan(100 * 365, 0, 0, 0, 0),
                     TimesStudied = 0
                 });
             }
@@ -382,7 +380,7 @@ namespace GREVocab {
             foreach (var word in words) {
                 Conn.Insert(new Record {
                     Json = JsonConvert.SerializeObject(word),
-                    NextSchedule = DateTime.Now - new TimeSpan(1, 0, 0, 0, 0),
+                    NextSchedule = DateTime.Now + new TimeSpan(100 * 365, 0, 0, 0, 0),
                     TimesStudied = new Random().Next(0, 7)
                 });
             }
