@@ -15,14 +15,16 @@ namespace GREVocab {
 
         protected override async void OnStart() {
             if (Preferences.Get("FirstTime", true)) {
-                Preferences.Set("FirstTime", false);
                 await ViewModel.ResetViewModel();
-                Preferences.Set("LastCompleted", DateTime.Now.Date - new TimeSpan(24, 0, 0));
+
+                Preferences.Set("FirstTime", false);
+                Preferences.Set("LastCompleted", DateTime.Now - new TimeSpan(24, 0, 0));
                 Preferences.Set("TodayLoaded", false);
             }
         }
 
         protected override void OnSleep() {
+            Preferences.Set("TodayLoaded", false);
         }
 
         protected override void OnResume() {

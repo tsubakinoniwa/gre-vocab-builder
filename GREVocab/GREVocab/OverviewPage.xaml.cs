@@ -25,13 +25,16 @@ namespace GREVocab {
 
         private void LoadNewWords() {
             DateTime today = DateTime.Now;
+
             if (!Preferences.Get("TodayLoaded", false)) {
                 // If we are ready to learn new words, load new words.
+                // Load new words whenever the date count has increased.
                 Console.WriteLine(Preferences.Get("LastCompleted", today.Date - new TimeSpan(24, 0, 0)));
                 if (Preferences.Get("LastCompleted", today.Date - new TimeSpan(
-                    24, 0, 0)).CompareTo(today.Date) < 0) {
+                    24, 0, 0)).Date.CompareTo(today.Date) < 0) {
                     ViewModel.LoadNewWords();
                 }
+
                 // No matter what, we always need to load review words.
                 ViewModel.LoadReviewWords();
                 Preferences.Set("TodayLoaded", true);

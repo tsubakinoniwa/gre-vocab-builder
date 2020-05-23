@@ -22,12 +22,16 @@ namespace GREVocab {
     }
     public class VocabBuilderViewModel : INotifyPropertyChanged {
         private SQLiteConnection Conn;
-        private VocabBuilderViewModelState State = VocabBuilderViewModelState.Review;
+        public VocabBuilderViewModelState State = VocabBuilderViewModelState.Review;
 
         public List<Record> ReviewRecords { get; set; } = new List<Record>();
         public List<Record> NewRecords { get; set; } = new List<Record>();
         public List<Record> Review10Records { get; set; } = new List<Record>();
         public List<Record> Review60Records { get; set; } = new List<Record>();
+
+        // Variables to keep track of the total amount of work scheduled today
+        public int NumReviewRecords { get; private set; }
+        public int NumNewRecords { get; private set; }
 
         private ObservableCollection<Record> allRecords = null;
         public ObservableCollection<Record> AllRecords {
@@ -284,6 +288,8 @@ namespace GREVocab {
             ReviewRecords = new List<Record>();
             ReviewRecords = AllRecords.Where(
                 x => x.NextSchedule.CompareTo(today) < 0).ToList();
+
+            NumReviewRecords = ReviewRecords.Count;
         }
 
         /*
@@ -323,6 +329,8 @@ namespace GREVocab {
                     NewRecords = allNewRecords.GetRange(0, NewWordsPerDay);
                 }
             }
+
+            NumNewRecords = NewRecords.Count;
         }
 
         private void ReloadNewWordsCommandHandler() {
@@ -378,10 +386,12 @@ namespace GREVocab {
             // Deserialize and re-serialize to insert into DB
             Word[] words = JsonConvert.DeserializeObject<Word[]>(data);
             foreach (var word in words) {
+                int timesStudied = new Random().Next(0, 7);
                 Conn.Insert(new Record {
                     Json = JsonConvert.SerializeObject(word),
-                    NextSchedule = DateTime.Now + new TimeSpan(100 * 365, 0, 0, 0, 0),
-                    TimesStudied = new Random().Next(0, 7)
+                    TimesStudied = timesStudied,
+                    NextSchedule = timesStudied == 0 ? DateTime.Now + new TimeSpan(100 * 365, 0, 0, 0, 0)
+                    : DateTime.Now - new TimeSpan(24, 0, 0),
                 });
             }
 

@@ -11,16 +11,28 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="1.25*"/>
+                <RowDefinition Height="1*"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Style="{StaticResource WarnButtonStyle}" Text="Quit"
-                    Clicked="QuitButton_Clicked" Grid.Row="0" Grid.Column="0"
-                    VerticalOptions="Start" x:Name="QuitButton"/>
+            <Grid Grid.Row="0" Grid.Column="0" VerticalOptions="Start"
+                  x:Name="TopGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <BoxView HeightRequest="20" HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#F0F0F0" Grid.Row="0" Grid.Column="0" x:Name="FullBar"/>
+                <Button Style="{StaticResource WarnButtonStyle}" Text="Quit"
+                        Clicked="QuitButton_Clicked" Grid.Row="1" Grid.Column="0"
+                        VerticalOptions="Start" x:Name="QuitButton"/>
+            </Grid>
 
             <!--Label to display the actual word-->
             <Label FontSize="36" BindingContext="{Reference _WordDetailPage}"

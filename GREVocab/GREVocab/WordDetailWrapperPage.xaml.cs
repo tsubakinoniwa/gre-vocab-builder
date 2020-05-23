@@ -18,7 +18,18 @@ namespace GREVocab {
             // Loop to keep pushing new words
             Record r = ViewModel.DisplayRecord;
             if (r != null) {
-                await Navigation.PushAsync(new WordDetailPage(r, false));
+                if (ViewModel.State == VocabBuilderViewModelState.Review) {
+                    await Navigation.PushAsync(new WordDetailPage(r, false,
+                        ViewModel.NumReviewRecords - ViewModel.ReviewRecords.Count,
+                        -1, -1, ViewModel.NumReviewRecords));
+                }
+                else {
+                    await Navigation.PushAsync(new WordDetailPage(r, false,
+                        ViewModel.Review10Records.Count, ViewModel.Review60Records.Count,
+                        ViewModel.NumNewRecords - ViewModel.NewRecords.Count -
+                        ViewModel.Review10Records.Count - ViewModel.Review60Records.Count,
+                        ViewModel.NumNewRecords));
+                }
                 await TextToSpeech.SpeakAsync(r.Word.Content);
             }
             else {
