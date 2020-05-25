@@ -334,7 +334,7 @@ namespace GREVocab {
             }
 
             NumNewRecords = NewRecords.Count;
-            Console.WriteLine(IsListUnique(NewRecords));
+            //Console.WriteLine(IsListUnique(NewRecords));
         }
 
         private void ReloadNewWordsCommandHandler() {
@@ -427,6 +427,14 @@ namespace GREVocab {
             }
 
             return true;
+        }
+
+        public void SetToOne(Record r) {
+            DateTime today = DateTime.Now.Date;
+            r.TimesStudied = 1;
+            r.NextSchedule = new DateTime(today.Year, today.Month, today.Day,
+                20, 0, 0);
+            Conn.Update(r);
         }
     }
 }

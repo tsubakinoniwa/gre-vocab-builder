@@ -13,6 +13,8 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*"/>
@@ -45,10 +47,18 @@
 
                 <!--Reset Button-->
                 <Button Style="{StaticResource WarnButtonStyle}" Text="Reset Progress"
-                    Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
-                    x:Name="ResetButton" Clicked="ResetButton_Clicked"/>
+                        Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+                        x:Name="ResetButton" Clicked="ResetButton_Clicked"/>
                 <Label x:Name="ResetDescription" Style="{StaticResource GroupHeader}"
                    Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                <!--Clear-->
+                <BoxView HeightRequest="25" Grid.Row="8" Grid.Column="0"/>
+
+                <!--Debug Clear Button-->
+                <Button Style="{StaticResource WarnButtonStyle}" Text="Fix"
+                        Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"
+                        x:Name="FixButton" Clicked="FixButton_Clicked"/>
             </Grid>
         </ScrollView>
     </ContentPage.Content>
