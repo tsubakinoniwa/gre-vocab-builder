@@ -199,8 +199,8 @@ namespace GREVocab {
                     break;
             }
 
-            Console.WriteLine(State);
-            Console.WriteLine($"{NewRecords.Count} {ReviewRecords.Count} {Review10Records.Count} {Review60Records.Count}");
+            //Console.WriteLine(State);
+            //Console.WriteLine($"{NewRecords.Count} {ReviewRecords.Count} {Review10Records.Count} {Review60Records.Count}");
         }
 
         /*
@@ -216,13 +216,15 @@ namespace GREVocab {
                 target.Add(target[ind]);
                 target[ind] = source;
             }
+            //Console.WriteLine(IsListUnique(target));
         }
 
         private void UnrecognizedCommandHandler() {
             // No matter which State, insert this record into NewRecords
             // at a random position
-            RandomInsert(CurrentRecord, NewRecords);
+            Record r = CurrentRecord;
             PopCurrentHead();
+            RandomInsert(r, NewRecords);
         }
 
         /*
@@ -314,15 +316,16 @@ namespace GREVocab {
                         inds[i] = i;
                     }
 
-                    for (int i = 0; i < NewWordsPerDay; i++) {
+                    for (int i = 0; i < Math.Min(NewWordsPerDay, allNewRecords.Count); i++) {
                         // Swap inds[i] with inds[k] for some random k >= i
                         // Upperbound is not inclusive.
                         int k = new Random().Next(i, allNewRecords.Count);
-                        inds[k] = i;
+                        int tmp = inds[k];
+                        inds[k] = inds[i];
 
-                        // We will no longer modify inds[i] = k, so might
+                        // We will no longer modify inds[i] = inds[k], so might
                         // as well just add the element here
-                        NewRecords.Add(allNewRecords[k]);
+                        NewRecords.Add(allNewRecords[tmp]);
                     }
                 }
                 else {
@@ -331,6 +334,7 @@ namespace GREVocab {
             }
 
             NumNewRecords = NewRecords.Count;
+            Console.WriteLine(IsListUnique(NewRecords));
         }
 
         private void ReloadNewWordsCommandHandler() {
@@ -410,6 +414,19 @@ namespace GREVocab {
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = "") {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        // Debug method to check if a list is unique
+        private bool IsListUnique<T>(List<T> list) {
+            HashSet<T> seen = new HashSet<T>();
+            foreach (T t in list) {
+                if (seen.Contains(t))
+                    return false;
+                else
+                    seen.Add(t);
+            }
+
+            return true;
         }
     }
 }
